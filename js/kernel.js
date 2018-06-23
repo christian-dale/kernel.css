@@ -35,7 +35,7 @@ var kernel = kernel || {};
     }
 
     app.closeNotice = function(e) {
-        e.currentTarget.closest('.ion-notice').remove();
+        e.currentTarget.closest('.ion-notice, .notice').remove();
     };
 
     /**
@@ -43,11 +43,11 @@ var kernel = kernel || {};
      **/
 
     app.toggleNav = function(e) {
-        var header = e.currentTarget.closest('.ion-header');
+        var header = e.currentTarget.closest('.ion-header, .header');
 
         if (header.classList.toggle('ion-toggled')) {
             var navMobile = document.createElement('nav');
-            navMobile.innerHTML = header.querySelector('.ion-nav').innerHTML;
+            navMobile.innerHTML = header.querySelector('.ion-nav, .nav').innerHTML;
             navMobile.className = 'ion-header-mobile ion-fade-in';
             navMobile.style['margin-top'] = header.offsetHeight + 'px';
 
@@ -66,7 +66,7 @@ var kernel = kernel || {};
 
             window.addEventListener('mouseup', onMouseUp);
         } else {
-            header.querySelector('.ion-header-mobile').remove();
+            header.querySelector('.ion-header-mobile, .header-mobile').remove();
         }
     };
 
@@ -75,7 +75,7 @@ var kernel = kernel || {};
      **/
 
     app.toggleSidebar = function(e) {
-        var sidebar = e.currentTarget.closest(".ion-sidebar");
+        var sidebar = e.currentTarget.closest(".ion-sidebar, .sidebar");
 
         if (sidebar.classList.toggle('ion-active')) {
             function onMouseUp(e) {
@@ -104,7 +104,7 @@ var kernel = kernel || {};
     app.initTabs = function(tabs) {
         tabs.forEach(function(tab) {
             var tabNavigation = tab.querySelectorAll('ul:first-child li');
-            var tabContent = tab.querySelectorAll('.ion-tab');
+            var tabContent = tab.querySelectorAll('.ion-tab, .tab');
 
             tabNavigation.forEach(function(element) {
                 element.onclick = function(event) {
@@ -131,10 +131,10 @@ var kernel = kernel || {};
      **/
 
     app.initEvents = function() {
-        var navToggle = document.querySelectorAll('.ion-header .nav-toggle');
-        var sidebarToggle = document.querySelector('.ion-sidebar ul li:first-child');
-        var notice = document.querySelectorAll('.ion-notice .material-icons');
-        var tabs = document.querySelectorAll('.ion-tabs');
+        var navToggle = document.querySelectorAll('.ion-header .nav-toggle, .header .nav-toggle');
+        var sidebarToggle = document.querySelector('.ion-sidebar ul li:first-child, .sidebar ul li:first-child');
+        var notice = document.querySelectorAll('.ion-notice .material-icons, .notice .material-icons');
+        var tabs = document.querySelectorAll('.ion-tabs, .tabs');
 
         if (navToggle) {
             navToggle.forEach(function(element) {
@@ -170,7 +170,7 @@ var kernel = kernel || {};
     }
 
     ProgressBar.prototype.setProgress = function(progress) {
-        this.el.querySelector('.ion-progress').style.width = progress + '%';
+        this.el.querySelector('.ion-progress, .progress').style.width = progress + '%';
     };
 
     app.ProgressBar = ProgressBar;
