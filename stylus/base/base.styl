@@ -1,115 +1,117 @@
-.base {
-    color: base.font-color;
-    font: base.font-size base.font;
-    margin: 0;
+.kernelcss {
+    .base {
+        color: base.font-color;
+        font: base.font-size base.font;
+        margin: 0;
 
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
 
-    p {
-        line-height: base.line-height;
+        p {
+            line-height: base.line-height;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 400;
+        }
+
+        h1 {
+            font-size: 2.441em;
+        }
+
+        h2 {
+            font-size: 1.953em;
+        }
+
+        h3 {
+            font-size: 1.563em;
+        }
+
+        h4 {
+            font-size: 1.25em;
+        }
+
+        h5 {
+            font-size: 1em;
+        }
+
+        h6 {
+            font-size: 0.8em;
+        }
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    .rtl {
+        direction: rtl;
+        unicode-bidi: embed;
+    }
+
+    .modern {
+        color: base.font-color;
+        font: base.font-size base.font;
+        margin: 0;
+
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+
+        p {
+            line-height: base.line-height;
+            font-size: 1.05em;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 300;
+        }
+
+        h1 {
+            font-size: 2.6179em;
+        }
+
+        h2 {
+            font-size: 2.0581em;
+        }
+
+        h3 {
+            font-size: 1.618em;
+        }
+
+        h4 {
+            font-size: 1.272em;
+        }
+
+        h5 {
+            font-size: 1em;
+        }
+
+        h6 {
+            font-size: 0.7862em;
+        }
+    }
+
+    @font-face {
+        font-family: 'Material Icons';
+        font-style: normal;
         font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/materialicons/v22/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
     }
 
-    h1 {
-        font-size: 2.441em;
+    .material-icons {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
     }
 
-    h2 {
-        font-size: 1.953em;
-    }
-
-    h3 {
-        font-size: 1.563em;
-    }
-
-    h4 {
-        font-size: 1.25em;
-    }
-
-    h5 {
-        font-size: 1em;
-    }
-
-    h6 {
-        font-size: 0.8em;
-    }
+    .material-icons.md-18 { font-size: 18px; }
+    .material-icons.md-24 { font-size: 24px; }
+    .material-icons.md-36 { font-size: 36px; }
+    .material-icons.md-48 { font-size: 48px; }
 }
-
-.rtl {
-    direction: rtl;
-    unicode-bidi: embed;
-}
-
-.modern {
-    color: base.font-color;
-    font: base.font-size base.font;
-    margin: 0;
-
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-
-    p {
-        line-height: base.line-height;
-        font-size: 1.05em;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        font-weight: 300;
-    }
-
-    h1 {
-        font-size: 2.6179em;
-    }
-
-    h2 {
-        font-size: 2.0581em;
-    }
-
-    h3 {
-        font-size: 1.618em;
-    }
-
-    h4 {
-        font-size: 1.272em;
-    }
-
-    h5 {
-        font-size: 1em;
-    }
-
-    h6 {
-        font-size: 0.7862em;
-    }
-}
-
-@font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/materialicons/v22/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
-}
-
-.material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    -webkit-font-feature-settings: 'liga';
-    -webkit-font-smoothing: antialiased;
-}
-
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }

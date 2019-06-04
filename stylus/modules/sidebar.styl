@@ -1,63 +1,65 @@
-.sidebar {
-	box-shadow: 0 1px 4px 0 rgba(0.0, 0, 0, 0.37);
-	height: 100vh;
-	position: fixed;
-	transition: width 100ms cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	width: 60px;
-	z-index: 999;
+.kernelcss {
+	.sidebar {
+		box-shadow: 0 1px 4px 0 rgba(0.0, 0, 0, 0.37);
+		height: 100vh;
+		position: fixed;
+		transition: width 100ms cubic-bezier(0.165, 0.840, 0.440, 1.000);
+		width: 60px;
+		z-index: 999;
 
-	+.splitview-main {
-		margin-left: 60px;
-	}
+		+.splitview-main {
+			margin-left: 60px;
+		}
 
-	ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
 
-		li {
-			cursor: pointer;
-			overflow: hidden;
-			text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
-			transition: all 100ms cubic-bezier(0.165, 0.840, 0.440, 1.000);
-			white-space: nowrap;
+			li {
+				cursor: pointer;
+				overflow: hidden;
+				text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+				transition: all 100ms cubic-bezier(0.165, 0.840, 0.440, 1.000);
+				white-space: nowrap;
 
-			i {
-				color: sidebar.icon-color;
-				font-size: 24px;
-				line-height: 48px;
-				padding-left: 18px;
+				i {
+					color: sidebar.icon-color;
+					font-size: 24px;
+					line-height: 48px;
+					padding-left: 18px;
+				}
+
+				img {
+					border-radius: 50%;
+					box-shadow: 0 1px 4px 0 rgba(0.0, 0, 0, 0.37);
+					height: 26px;
+					margin: 15px 0 7px 17px;
+					width: 26px;
+				}
+
+				.item-name {
+					color: sidebar.item-name-color;
+					display: inline;
+					font-weight: normal;
+					line-height: 48px;
+					margin-left: 15px;
+					vertical-align: top;
+				}
 			}
 
-			img {
-				border-radius: 50%;
-				box-shadow: 0 1px 4px 0 rgba(0.0, 0, 0, 0.37);
-				height: 26px;
-				margin: 15px 0 7px 17px;
-				width: 26px;
-			}
-
-			.item-name {
-				color: sidebar.item-name-color;
-				display: inline;
-				font-weight: normal;
-				line-height: 48px;
-				margin-left: 15px;
-				vertical-align: top;
+			li:hover {
+				background: rgba(255, 255, 255, 0.07);
+				border-left: 3px solid sidebar.item-hover-border-color;
+				/*
+	      -webkit-clip-path: polygon(0 0, 100% 6%, 99% 93%, 0 100%);
+	      clip-path: polygon(0 0, 100% 6%, 99% 93%, 0 100%);
+	      */
 			}
 		}
 
-		li:hover {
-			background: rgba(255, 255, 255, 0.07);
-			border-left: 3px solid sidebar.item-hover-border-color;
-			/*
-      -webkit-clip-path: polygon(0 0, 100% 6%, 99% 93%, 0 100%);
-      clip-path: polygon(0 0, 100% 6%, 99% 93%, 0 100%);
-      */
+		li:first-child {
+			// background-color: rgba(255, 255, 255, 0.1);
 		}
-	}
-
-	li:first-child {
-		// background-color: rgba(255, 255, 255, 0.1);
 	}
 }

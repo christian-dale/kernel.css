@@ -1,29 +1,31 @@
-.tabs {
-    border: 1px solid #eee;
-    border-radius: 5px;
-    padding: 15px;
+.kernelcss {
+    .tabs {
+        border: 1px solid #eee;
+        border-radius: 5px;
+        padding: 15px;
 
-    >ul:first-child {
-        border-bottom: 1px solid #eee;
-        margin: 0;
-        padding: 10px 0;
+        >ul:first-child {
+            border-bottom: 1px solid #eee;
+            margin: 0;
+            padding: 10px 0;
 
-        >li {
-            display: inline;
+            >li {
+                display: inline;
 
-            &:not(:first-of-type) {
-                padding-left: 10px;
-            }
+                &:not(:first-of-type) {
+                    padding-left: 10px;
+                }
 
-            >a {
-                color: base.font-color;
-                text-decoration: none;
-                cursor: pointer;
+                >a {
+                    color: base.font-color;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
             }
         }
-    }
 
-    >div:not(:first-of-type) {
-        display: none;
+        >div:not(:first-of-type) {
+            display: none;
+        }
     }
 }
