@@ -1,23 +1,23 @@
-.ion-grid {
-	@extend .ion-section;
+.grid {
+	@extend .section;
 	display: flex;
 
 	for num in (1...17) {
-		.ion-col-{num} {
+		.col-{num} {
 			flex: num;
 		}
 	}
 }
 
-[class*='ion-col-'] {
+[class*='col-'] {
   margin-right: $main-padding * 2;
 }
 
-[class*='ion-col-']:last-of-type {
+[class*='col-']:last-of-type {
   margin-right: 0;
 }
 
-.ion-container {
+.container {
 	box-sizing: border-box;
 	margin-left: auto;
 	margin-right: auto;
@@ -26,33 +26,33 @@
 	padding-right: $main-padding;
 }
 
-.ion-visible-sm {
+.visible-sm {
 	display: none;
 }
 
-.ion-visible-lg {
+.visible-lg {
 	display: block;
 }
 
 /* For small screen sizes */
 @media (max-width: container.width-sm) {
-	.ion-grid {
+	.grid {
 		flex-direction: column;
 	}
 
-	.ion-container {
+	.container {
 		width: 100%;
 	}
 
-	[class*='ion-col-'] {
+	[class*='col-'] {
 	  margin-right: 0;
 	}
 
-	.ion-visible-sm {
+	.visible-sm {
 		display: block;
 	}
 
-	.ion-visible-lg {
+	.visible-lg {
 		display: none;
 	}
 }

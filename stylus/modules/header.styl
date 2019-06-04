@@ -1,7 +1,7 @@
 /* The header class is intended for use on the top of the page,
    and not anywhere else. It's usually accompanied by a navigation bar */
 
-.ion-header {
+.header {
     background-color: header.bg;
     // box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.20);
     display: inline-block;
@@ -10,29 +10,29 @@
     width: 100%;
     z-index: 999;
 
-    &.ion-header-xs {
+    &.header-xs {
         height: 48px;
         line-height: 48px;
     }
 
-    &.ion-header-sm {
+    &.header-sm {
         height: 60px;
         line-height: 60px;
     }
 
-    &.ion-header-md {
+    &.header-md {
         font-size: 1.1em;
         height: 70px;
         line-height: 70px;
     }
 
-    &.ion-header-lg {
+    &.header-lg {
         font-size: 1.4em;
         height: 95px;
         line-height: 95px;
     }
 
-    &.ion-header-xl {
+    &.header-xl {
         font-size: 1.4em;
         height: 150px;
     }
@@ -45,19 +45,19 @@
         float: right;
         margin-right: 15px;
         outline: none;
-        position: relative;
+        posit: relative;
         top: 50%;
         transform: translateY(-50%);
     }
 
-    .ion-nav {
+    .nav {
        > ul > li:hover {
             border-bottom: 3px solid header.border-color;
         }
     }
 }
 
-.ion-menu {
+.menu {
     background-color: rgba(0, 0, 0, 0.95);
     height: 100%;
     position: fixed;
@@ -94,14 +94,14 @@
     }
 }
 
-.ion-header-brand {
+.header-brand {
     float: left;
     font-family: inherit;
     font-size: $brand-font-size;
     padding-left: $main-padding;
 }
 
-.ion-header-mobile {
+.header-mobile {
     background-color: #fff;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
@@ -130,7 +130,7 @@
         }
     }
 
-    .ion-dropdown {
+    .dropdown {
         ul li {
             padding-left: 25px;
         }
@@ -138,8 +138,8 @@
 }
 
 @media (max-width: container.width-sm) {
-    .ion-header {
-        .ion-nav {
+    .header {
+        .nav {
             display: none;
         }
 
