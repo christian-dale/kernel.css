@@ -59,4 +59,25 @@
     .autowrap {
     	overflow-wrap: break-word;
     }
+
+    .block {
+        display: block;
+    }
+
+    .fullwidth {
+        width: 100% !important;
+    }
+
+    .halfwidth {
+        width: 50% !important;
+    }
+}
+
+/* For small screen sizes */
+@media (max-width: container.width-sm) {
+    .kernelcss {
+        .halfwidth {
+            width: 100% !important;
+        }
+    }
 }
