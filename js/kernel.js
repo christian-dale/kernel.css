@@ -35,7 +35,7 @@ var kernel = kernel || {};
     }
 
     app.closeNotice = function(e) {
-        e.currentTarget.closest('.ion-notice, .notice').remove();
+        e.currentTarget.closest('.notice, .notice').remove();
     };
 
     /**
@@ -43,12 +43,12 @@ var kernel = kernel || {};
      **/
 
     app.toggleNav = function(e) {
-        var header = e.currentTarget.closest('.ion-header, .header');
+        var header = e.currentTarget.closest('.header, .header');
 
-        if (header.classList.toggle('ion-toggled')) {
+        if (header.classList.toggle('toggled')) {
             var navMobile = document.createElement('nav');
-            navMobile.innerHTML = header.querySelector('.ion-nav, .nav').innerHTML;
-            navMobile.className = 'ion-header-mobile ion-fade-in';
+            navMobile.innerHTML = header.querySelector('.nav, .nav').innerHTML;
+            navMobile.className = 'header-mobile fade-in';
             navMobile.style['margin-top'] = header.offsetHeight + 'px';
 
             header.appendChild(navMobile);
@@ -60,13 +60,13 @@ var kernel = kernel || {};
                     e.target != header.querySelector('.nav-toggle i')
                 ) {
                     navMobile.remove();
-                    header.classList.remove('ion-toggled');
+                    header.classList.remove('toggled');
                 }
             }
 
             window.addEventListener('mouseup', onMouseUp);
         } else {
-            header.querySelector('.ion-header-mobile, .header-mobile').remove();
+            header.querySelector('.header-mobile, .header-mobile').remove();
         }
     };
 
@@ -75,9 +75,9 @@ var kernel = kernel || {};
      **/
 
     app.toggleSidebar = function(e) {
-        var sidebar = e.currentTarget.closest(".ion-sidebar, .sidebar");
+        var sidebar = e.currentTarget.closest(".sidebar");
 
-        if (sidebar.classList.toggle('ion-active')) {
+        if (sidebar.classList.toggle('active')) {
             function onMouseUp(e) {
                 if (
                     e.target != sidebar &&
@@ -85,7 +85,7 @@ var kernel = kernel || {};
                     e.target != sidebar.querySelector('li:first-child i')
                 ) {
                     sidebar.style.width = '60px';
-                    sidebar.classList.remove('ion-active');
+                    sidebar.classList.remove('active');
                 }
             }
 
@@ -104,18 +104,18 @@ var kernel = kernel || {};
     app.initTabs = function(tabs) {
         tabs.forEach(function(tab) {
             var tabNavigation = tab.querySelectorAll('ul:first-child li');
-            var tabContent = tab.querySelectorAll('.ion-tab, .tab');
+            var tabContent = tab.querySelectorAll('.tab, .tab');
 
             tabNavigation.forEach(function(element) {
                 element.onclick = function(event) {
                     tabContent.forEach(function(el) {
-                        el.classList.remove('ion-tab-selected');
+                        el.classList.remove('tab-selected');
                     });
 
-                    tabContent[getElementIndex(event.currentTarget)].classList.add('ion-tab-selected');
+                    tabContent[getElementIndex(event.currentTarget)].classList.add('tab-selected');
 
                     tabContent.forEach(function(el) {
-                        if (el.classList.contains('ion-tab-selected')) {
+                        if (el.classList.contains('tab-selected')) {
                             el.style.display = 'block';
                         } else {
                             el.style.display = 'none';
@@ -130,10 +130,10 @@ var kernel = kernel || {};
         slideshows.forEach(function(slideshow) {
             var slide = 0;
 
-            slideshow.innerHTML += '<div class="ion-prev">&lt;</div><div class="ion-next">&gt;</div>';
+            slideshow.innerHTML += '<div class="prev">&lt;</div><div class="next">&gt;</div>';
 
             function updateSlideshow() {
-                var slides = slideshow.querySelectorAll('.ion-slide');
+                var slides = slideshow.querySelectorAll('.slide');
 
                 if (slide > slides.length - 1) {
                     slide = 0;
@@ -155,8 +155,8 @@ var kernel = kernel || {};
             function addNav() {
                 var strnav = '';
 
-                strnav += '<ul class="ion-nav">';
-                for (var i = 0; i < slideshow.querySelectorAll('.ion-slide').length; i++) {
+                strnav += '<ul class="nav">';
+                for (var i = 0; i < slideshow.querySelectorAll('.slide').length; i++) {
                     strnav += '<li>' + '&#9679;' + '</li>';
                 }
                 strnav += '</ul>';
@@ -175,12 +175,12 @@ var kernel = kernel || {};
                 }, 5000);
             }
 
-            slideshow.querySelector('.ion-prev').addEventListener('click', function() {
+            slideshow.querySelector('.prev').addEventListener('click', function() {
                 slide --;
                 updateSlideshow();
             });
 
-            slideshow.querySelector('.ion-next').addEventListener('click', function() {
+            slideshow.querySelector('.next').addEventListener('click', function() {
                 slide ++;
                 updateSlideshow();
             });
@@ -192,11 +192,11 @@ var kernel = kernel || {};
      **/
 
     app.initEvents = function() {
-        var navToggle = document.querySelectorAll('.ion-header .nav-toggle, .header .nav-toggle');
-        var sidebarToggle = document.querySelector('.ion-sidebar ul li:first-child, .sidebar ul li:first-child');
-        var notice = document.querySelectorAll('.ion-notice .material-icons, .notice .material-icons');
-        var tabs = document.querySelectorAll('.ion-tabs, .tabs');
-        var slideshows = document.querySelectorAll('.ion-slideshow, .slideshow');
+        var navToggle = document.querySelectorAll('.header .nav-toggle');
+        var sidebarToggle = document.querySelector('.sidebar ul li:first-child');
+        var notice = document.querySelectorAll('.notice .material-icons');
+        var tabs = document.querySelectorAll('.tabs');
+        var slideshows = document.querySelectorAll('.slideshow');
 
         if (navToggle) {
             navToggle.forEach(function(element) {
@@ -236,7 +236,7 @@ var kernel = kernel || {};
     }
 
     ProgressBar.prototype.setProgress = function(progress) {
-        this.el.querySelector('.ion-progress, .progress').style.width = progress + '%';
+        this.el.querySelector('.progress, .progress').style.width = progress + '%';
     };
 
     app.ProgressBar = ProgressBar;
