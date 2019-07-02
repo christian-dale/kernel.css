@@ -6,13 +6,16 @@
     <meta name="description" content="The CSS framework built for any kind of task">
     <meta name="theme-color" content="#2979ff">
     <meta property="og:title" content="The kernel.css Framework">
-    <link rel="stylesheet" type="text/css" href="https://ionogy.com/kernel.css/v0.6.0/kernel.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../build/kernel.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
 </head>
 
 <body class="ion-base">
+    <!-- <div class="scroll-indicator"></div> -->
+
     <header class="ion-header ion-header-sm">
         <button class="nav-toggle">
             <i class="material-icons">menu</i>
@@ -23,12 +26,47 @@
                 <ul>
                     <li class="ion-nav-active-state">
                         <a href="/kernel.css">Home</a>
+
+                        <div class="ion-dropdown">
+                            <ul>
+                                <li>
+                                    <a href="#">lorem</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li>
                         <a href="https://github.com/Ionogy/kernel.css/releases">Downloads</a>
+
+                        <div class="ion-dropdown">
+                            <ul>
+                                <li>
+                                    <a href="#">Latest version</a>
+                                </li>
+                                <li>
+                                    <a href="#">Legacy version</a>
+                                </li>
+                                <li>
+                                    <a href="#">Dev version</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li>
                         <a href="https://github.com/Ionogy/kernel.css/blob/master/README.md">Docs</a>
+                        <div class="ion-dropdown">
+                            <ul>
+                                <li>
+                                    <a href="#">Latest docs</a>
+                                </li>
+                                <li>
+                                    <a href="#">Legacy docs</a>
+                                </li>
+                                <li>
+                                    <a href="#">Dev docs</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li>
                         <a href="https://github.com/ionogy/kernel.css"><img class="github-icon" src="GitHub-Mark.png" alt="GitHub"> GitHub</a>
@@ -42,7 +80,7 @@
         <div class="ion-container ion-vertical-center">
             <h3>kernel.css</h3>
             <p>simplicity done right</p>
-            <a class="ion-button ion-btn-primary ion-btn-lg" draggable="false" href="https://github.com/Ionogy/kernel.css/releases"><i class="material-icons" style="vertical-align: middle; font-size: 24px; padding-right: 10px;">&#xE2C4;</i>Download</a>
+            <a class="ion-button ion-btn-outline ion-btn-lg" draggable="false" href="https://github.com/Ionogy/kernel.css/releases"><i class="material-icons" style="vertical-align: middle; font-size: 24px; padding-right: 10px;">&#xE2C4;</i>Download</a>
         </div>
     </div>
 
@@ -101,6 +139,8 @@
         <hr class="ion-hr">
         <h3>Headings</h3>
 
+        <p>As long as <code class="ion-code">ion-base</code> is being used, these styles will be applied automatically.</p>
+
         <h1>Heading 1 <div class="heading-font-label"><code>2.6179em / 41px</code></div></h1>
         <h2>Heading 2 <div class="heading-font-label"><code>2.0681em / 33px</code></div></h2>
         <h3>Heading 3 <div class="heading-font-label"><code>1.618em / 25px</code></div></h3>
@@ -111,14 +151,6 @@
         <p style="display: inline;">Paragraph
             <div class="heading-font-label"><code>1.0rem / 16px</code></div>
         </p>
-
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
-        <pre class="ion-code ion-code-block prettyprint">
-<code>&lt;p class="p"&gt;Hello, World!&lt;/p&gt;</code></pre>
 
         <hr class="ion-hr">
         <h3>Grid</h3>
@@ -264,6 +296,9 @@ Example
                 <button class="ion-button ion-btn-risk ion-section">Risk</button>
             </div>
             <div class="ion-col-1">
+                <button class="ion-button ion-btn-outline ion-section">Outline</button>
+            </div>
+            <div class="ion-col-1">
                 <button class="ion-button ion-btn-minimal ion-section">Minimal</button>
             </div>
         </div>
@@ -342,7 +377,7 @@ and you can extend the class if you want to customize your own buttons.
         <pre class="ion-code ion-code-block prettyprint">
 <code>&lt;div class="ion-bg-{color}"&gt;&lt;/div&gt;</code></pre>
 
-        <p>kernel.css includes predefined color classes. These are great for prototyping your ideas quickly, but you may not want to pollute your dom with a bunch of color classes.</p>
+        <p>kernel.css includes predefined color classes. These are great for prototyping your ideas quickly, but you may not want to pollute your HTML with a bunch of color classes.</p>
 
         <hr class="ion-hr">
         <h3>Tabs</h3>
@@ -384,6 +419,23 @@ and you can extend the class if you want to customize your own buttons.
 &lt;/div&gt;</code></pre>
 
             <hr class="ion-hr">
+            <h3>Slideshow</h3>
+
+            <div class="ion-slideshow" data-nav="true" data-auto="true">
+                <div class="ion-slide">
+                    <img src="https://source.unsplash.com/eaxgNP4cpY8" alt="">
+                </div>
+
+                <div class="ion-slide">
+                    <img src="https://source.unsplash.com/-OyWCXEczxI" alt="">
+                </div>
+
+                <div class="ion-slide">
+                    <img src="https://source.unsplash.com/Nk5KAUgTpj4" alt="">
+                </div>
+            </div>
+
+            <hr class="ion-hr">
             <h2>Labels</h2>
 
             <a href="#" class="ion-label">Label</a>
@@ -408,6 +460,16 @@ and you can extend the class if you want to customize your own buttons.
 
             <pre class="ion-code ion-code-block prettyprint">
 <code>&lt;a class="ion-tag" href="#"&gt;Biceps&lt;a&gt;</code></pre>
+
+        <hr class="ion-hr">
+        <h3>Blockquote</h3>
+
+        <blockquote class="ion-blockquote">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </blockquote>
+
+        <pre class="ion-code ion-code-block prettyprint">
+<code>&lt;blockquote class="ion-blockquote"&gt;&lt;p&gt;...&lt;/p&gt;&lt;blockquote&gt;</code></pre>
 
         <hr class="ion-hr">
         <h3>Utils</h3>
@@ -546,7 +608,7 @@ Make an element circular.
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
                         in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         <hr>
-                        <h2>Comments:</h2> Great post, keep it up!
+                        <h3>Comments:</h3> Great post, keep it up!
                     </div>
                 </div>
             </div>
@@ -627,7 +689,7 @@ Code block
     </footer>
 
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-    <script src="https://ionogy.com/kernel.css/v0.6.0/kernel.js"></script>
+    <script src="../js/kernel.js"></script>
     <script type="text/javascript">
         'use strict';
 
@@ -656,16 +718,25 @@ Code block
         };
 
         /**
-        * Change header on scroll.
-        **/
+         * Change header on scroll.
+         **/
 
         window.onscroll = function() {
-            if (document.body.scrollTop > document.querySelector('.hero').clientHeight) {
+            if (document.scrollingElement.scrollTop > document.querySelector('.hero').clientHeight) {
                 document.querySelector('header').classList.add('header-hover');
             } else {
                 document.querySelector('header').classList.remove('header-hover');
             }
         };
+
+        /**
+         * Visual queue showing where on the page you reside.
+         **/
+
+         // window.onscroll = function() {
+         //     var x = (document.scrollingElement.scrollTop / document.documentElement.scrollHeight) * 100;
+         //     document.querySelector('.scroll-indicator').style.width = x + '%';
+         // };
     </script>
 </body>
 

@@ -1,5 +1,9 @@
 /* Website specific styles */
 
+html, body {
+    height: 100%;
+}
+
 main {
     display: block;
     margin-bottom: 15px;
@@ -10,6 +14,13 @@ main {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
     transition: all 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
+
+/* .scroll-indicator {
+    background: #2962FF;
+    height: 3px;
+    position: fixed;
+    z-index: 1000;
+} */
 
 /* Remove border added by code-prettify */
 
@@ -31,16 +42,14 @@ nav .github-icon {
 .hero {
     height: 600px;
     background-color: #fff;
-    border-bottom: 1px solid #eee;
+    box-shadow: 1px 1px 3px #eee;
+    margin-bottom: 25px;
 }
 
 .hero h3 {
+    color: #2962FF;
+    font-family: 'Roboto Condensed';
     font-weight: 300;
-}
-
-.hero .hero-btn {
-    background-color: #fafafa;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
 }
 
 .heading-font-label {
@@ -85,6 +94,9 @@ nav .github-icon {
 /* For small screen sizes */
 
 @media (max-width: 800px) {
+    .hero {
+        height: 100%;
+    }
     .block-spacing {
         margin-bottom: 0;
     }

@@ -126,6 +126,67 @@ var kernel = kernel || {};
         });
     };
 
+    app.initSlideshows = function(slideshows) {
+        slideshows.forEach(function(slideshow) {
+            var slide = 0;
+
+            slideshow.innerHTML += '<div class="ion-prev">&lt;</div><div class="ion-next">&gt;</div>';
+
+            function updateSlideshow() {
+                var slides = slideshow.querySelectorAll('.ion-slide');
+
+                if (slide > slides.length - 1) {
+                    slide = 0;
+                }
+
+                if (slide < 0) {
+                    slide = slides.length - 1;
+                }
+
+                for (var i = 0; i < slides.length; i++) {
+                    slides[i].style.display = 'none';
+
+                    if (i == slide) {
+                        slides[i].style.display = 'block';
+                    }
+                }
+            }
+
+            function addNav() {
+                var strnav = '';
+
+                strnav += '<ul class="ion-nav">';
+                for (var i = 0; i < slideshow.querySelectorAll('.ion-slide').length; i++) {
+                    strnav += '<li>' + '&#9679;' + '</li>';
+                }
+                strnav += '</ul>';
+
+                slideshow.innerHTML += strnav;
+            }
+
+            if (slideshow.dataset.nav) {
+                addNav();
+            }
+
+            if (slideshow.dataset.auto) {
+                setInterval(function() {
+                    slide++;
+                    updateSlideshow();
+                }, 5000);
+            }
+
+            slideshow.querySelector('.ion-prev').addEventListener('click', function() {
+                slide --;
+                updateSlideshow();
+            });
+
+            slideshow.querySelector('.ion-next').addEventListener('click', function() {
+                slide ++;
+                updateSlideshow();
+            });
+        });
+    };
+
     /**
      * Initializes dom elements.
      **/
@@ -135,6 +196,7 @@ var kernel = kernel || {};
         var sidebarToggle = document.querySelector('.ion-sidebar ul li:first-child, .sidebar ul li:first-child');
         var notice = document.querySelectorAll('.ion-notice .material-icons, .notice .material-icons');
         var tabs = document.querySelectorAll('.ion-tabs, .tabs');
+        var slideshows = document.querySelectorAll('.ion-slideshow, .slideshow');
 
         if (navToggle) {
             navToggle.forEach(function(element) {
@@ -155,6 +217,10 @@ var kernel = kernel || {};
         if (tabs) {
             app.initTabs(tabs);
         }
+
+        if (slideshows) {
+            app.initSlideshows(slideshows);
+        }
     };
 
     app.init = function() {
@@ -174,6 +240,16 @@ var kernel = kernel || {};
     };
 
     app.ProgressBar = ProgressBar;
+
+    if (window.jQuery) {
+        jQuery.fn.extend({
+            ionTabs: function() {
+                this.each(function() {
+                    app.initTabs([this]);
+                });
+            }
+        });
+    }
 })(kernel);
 
 window.onload = kernel.init;
