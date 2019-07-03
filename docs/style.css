@@ -41,7 +41,7 @@ nav .github-icon {
 
 .hero {
     height: 600px;
-    background-color: #fff;
+    background-color: #fff !important;
     box-shadow: 1px 1px 3px #eee;
     margin-bottom: 25px;
 }
