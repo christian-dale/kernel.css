@@ -130,7 +130,35 @@ var kernel = kernel || {};
         slideshows.forEach(function(slideshow) {
             var slide = 0;
 
-            slideshow.innerHTML += '<div class="prev">&lt;</div><div class="next">&gt;</div>';
+            // slideshow.innerHTML += '<div class="prev">&lt;</div><div class="next">&gt;</div>';
+
+            var slides = slideshow.querySelectorAll('.slide');
+
+            for (var i = 0; i < slides.length; i++) {
+                var mouseX = 0;
+
+                slides[i].addEventListener("touchstart", function(event) {
+                    mouseX = event.changedTouches[0].pageX;
+                });
+
+                slides[i].addEventListener("touchend", function(event) {
+                    mouseX = mouseX - event.changedTouches[0].pageX;
+
+                    console.log(mouseX);
+
+                    if (mouseX > 30 && slide <= slides.length - 1) {
+                        slide++;
+                        for (var i = 0; i < slides.length; i++) {
+                            slides[i].style.left = '-' + slides[i].offsetWidth * slide + 'px';
+                        }
+                    } else if (mouseX < -30) {
+                        slide--;
+                        for (var i = 0; i < slides.length; i++) {
+                            slides[i].style.left = '-' + slides[i].offsetWidth * slide + 'px';
+                        }
+                    }
+                });
+            }
 
             function updateSlideshow() {
                 var slides = slideshow.querySelectorAll('.slide');
@@ -164,26 +192,26 @@ var kernel = kernel || {};
                 slideshow.innerHTML += strnav;
             }
 
-            if (slideshow.dataset.nav) {
+            if (slideshow.dataset.nav == "true") {
                 addNav();
+
+                slideshow.querySelector('.prev').addEventListener('click', function() {
+                    slide --;
+                    updateSlideshow();
+                });
+
+                slideshow.querySelector('.next').addEventListener('click', function() {
+                    slide ++;
+                    updateSlideshow();
+                });
             }
 
-            if (slideshow.dataset.auto) {
+            if (slideshow.dataset.auto == "true") {
                 setInterval(function() {
                     slide++;
                     updateSlideshow();
                 }, 5000);
             }
-
-            slideshow.querySelector('.prev').addEventListener('click', function() {
-                slide --;
-                updateSlideshow();
-            });
-
-            slideshow.querySelector('.next').addEventListener('click', function() {
-                slide ++;
-                updateSlideshow();
-            });
         });
     };
 

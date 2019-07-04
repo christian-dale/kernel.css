@@ -1,11 +1,18 @@
 .kernelcss {
     .slideshow {
+        overflow: hidden;
+        white-space: nowrap;
         height: 400px;
         position: relative;
         width: 100%;
 
+        .slide {
+            display: inline-block;
+            position: relative;
+        }
+
         .slide:not(:first-child) {
-            display: none;
+            /* display: none; */
         }
 
         .prev, .next {
