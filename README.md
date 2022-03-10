@@ -82,6 +82,10 @@ Contribute
 If you like the project and would like to contribute, you can
 do so at github.
 
+You can also help support the continued development of this project on
+
+<a href="https://www.buymeacoffee.com/christiandale" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
 kernel.css uses [stylus](http://stylus-lang.com/) internally as it's CSS Preprocessor.
 
 Contributing code
