@@ -28,8 +28,8 @@
     },
     "homepage": "https://github.com/Ionogy/kernel.css#readme",
     "dependencies": {
-        "stylint": "^1.5.9",
-        "stylus": "^0.54.7",
+        "stylint": "^2.0.0",
+        "stylus": "^0.56.0",
         "minifier": "^0.8.1"
     }
 }
