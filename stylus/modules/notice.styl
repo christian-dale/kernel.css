@@ -1,47 +1,45 @@
-.kernelcss {
-    .notice {
-        animation: fadein 0.5s;
-        background: notice.bg;
-        border-radius: 3px;
-    	box-sizing: border-box;
-        color: #212121;
-        line-height: 40px;
-    	min-height: 40px;
-    	padding: 0 15px;
-    	width: 100%;
-    	z-index: 999;
+.notice {
+    animation: fadein 0.5s;
+    background: notice.bg;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #212121;
+    line-height: 40px;
+    min-height: 40px;
+    padding: 0 15px;
+    width: 100%;
+    z-index: 999;
 
-        &.safe {
-            background: notice.safe-bg;
-        }
-
-        &.info {
-            background: notice.info-bg;
-            color: notice.color;
-        }
-
-        &.alert {
-            background: notice.alert-bg;
-            color: notice.color;
-        }
-
-        &.warning {
-            background: notice.warning-bg;
-        }
-
-        .material-icons {
-            cursor: pointer;
-            float: right;
-            line-height: 40px;
-        }
+    &.safe {
+        background: notice.safe-bg;
     }
 
-    @keyframes fadein {
-    	from {
-    		opacity: 0;
-    	}
-    	to {
-    		opacity: 1;
-    	}
+    &.info {
+        background: notice.info-bg;
+        color: notice.color;
+    }
+
+    &.alert {
+        background: notice.alert-bg;
+        color: notice.color;
+    }
+
+    &.warning {
+        background: notice.warning-bg;
+    }
+
+    .material-icons {
+        cursor: pointer;
+        float: right;
+        line-height: 40px;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
