@@ -1,5 +1,5 @@
 /*
-    kernel.css v0.6.0
+    kernel.css v1.0.0
     MIT License
     github.com/ionogy/kernel.css
 */
@@ -53,9 +53,9 @@ class KernelCSS {
      */
 
     nav(e) {
-        const header = e.currentTarget.closest('.header, .ke-header');
+        const header = e.currentTarget.closest('.ke-header');
 
-        if (header.classList.toggle('toggled')) {
+        if (header.classList.toggle('ke-toggled')) {
             var navMobile = document.createElement('nav');
             navMobile.innerHTML = header.querySelector('.ke-nav').innerHTML;
             navMobile.className = 'ke-header-mobile ke-fade-in';
@@ -66,11 +66,11 @@ class KernelCSS {
             function onMouseUp(e) {
                 if (
                     e.target != navMobile &&
-                    e.target != header.querySelector(".nav-toggle, .ke-nav-toggle") &&
-                    e.target != header.querySelector(".nav-toggle i, .ke-nav-toggle i")
+                    e.target != header.querySelector(".ke-nav-toggle") &&
+                    e.target != header.querySelector(".ke-nav-toggle i")
                 ) {
                     navMobile.remove();
-                    header.classList.remove('toggled');
+                    header.classList.remove('ke-toggled');
                 }
             }
 
@@ -85,8 +85,8 @@ class KernelCSS {
     }
 
     init() {
-        document.querySelectorAll(".tabs, .ke-tabs").forEach(x => this.tabs(x));
-        document.querySelector(".header .nav-toggle, .ke-header .ke-nav-toggle").onclick = this.nav;
+        document.querySelectorAll(".ke-tabs").forEach(x => this.tabs(x));
+        document.querySelector(".ke-header .ke-nav-toggle").onclick = this.nav;
         document.querySelectorAll(".ke-notice i").forEach(x => x.onclick = this.notice);
     }
 }

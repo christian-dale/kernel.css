@@ -1,6 +1,6 @@
 {
     "name": "kernel.css",
-    "version": "0.6.0",
+    "version": "1.0.0",
     "description": "The CSS framework built for any kind of task",
     "stylintrc": ".stylintrc",
     "scripts": {
