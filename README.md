@@ -23,7 +23,7 @@ Features
 --------
  * Includes all the main colors specified in the material design colors spec.
  * Grid system based on flexbox.
- * Navigation with four preset sizes (ion-header-xs, ion-header-sm, ion-header-lg, ion-header-xl).
+ * Navigation with four preset sizes (ke-header-xs, ke-header-sm, ke-header-lg, ke-header-xl).
  * Cubic-bezier transitions.
 
 Why was it created?
@@ -50,24 +50,24 @@ Simple. Just include these tags in your html.
 Navigation code example
 -----------
 ```
-<body class="ion-base">
-  <header class="ion-header ion-header-sm">
-    <div class="ion-header-brand">kernel.css</div>
+<body class="ke-base">
+  <header class="ke-header ke-header-sm">
+    <div class="ke-header-brand">kernel.css</div>
 
     <button class="nav-toggle">
         <i class="material-icons">menu</i>
     </button>
 
-    <div class="ion-container">
-      <nav class="ion-nav">
+    <div class="ke-container">
+      <nav class="ke-nav">
         <ul>
-          <li class="ion-nav-active-state"><a href="#">Home</a></li>
+          <li class="ke-nav-active-state"><a href="#">Home</a></li>
           <li><a href="#">Download</a></li>
           <li><a href="#">Wiki</a></li>
           <li><a href="#">About us</a></li>
         </ul>
       </nav>
-      <nav class="ion-nav ion-float-right">
+      <nav class="ke-nav ke-float-right">
         <ul>
           <li><a href="#">Blog</a></li>
         </ul>
