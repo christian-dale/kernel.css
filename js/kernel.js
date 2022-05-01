@@ -4,51 +4,61 @@
     github.com/ionogy/kernel.css
 */
 
-var kernel = kernel || {};
+class KernelCSS {
+    constructor() {
 
-(function(app) {
-    'use strict';
-
-    var getElementIndex = function(element) {
-        var index = 0;
-
-        while ((element = element.previousElementSibling)) {
-            index++;
-        }
-
-        return index;
-    };
-
-    if (window.Element && !Element.prototype.closest) {
-        Element.prototype.closest = function(s) {
-            var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-                i,
-                el = this;
-
-            do {
-                i = matches.length;
-                while (--i >= 0 && matches.item(i) !== el) {};
-            } while ((i < 0) && (el = el.parentElement));
-
-            return el;
-        };
     }
 
-    app.closeNotice = function(e) {
-        e.currentTarget.closest('.notice, .notice').remove();
-    };
+    /**
+     * Helper method for finding the index of a child element.
+     */
+
+    index(el) {
+        if (!el) {
+            return -1;
+        }
+
+        let i = 0;
+
+        while (el = el.previousElementSibling) {
+            i++;
+        }
+
+        return i;
+    }
 
     /**
-     * Toogle header navigation.
-     **/
+     * Enable tabs support.
+     */
 
-    app.toggleNav = function(e) {
-        var header = e.currentTarget.closest('.header, .header');
+    tabs(tab) {
+        const nav = tab.querySelectorAll("ul li");
+        const content = tab.querySelectorAll(".tab, .ke-tab");
+
+        nav.forEach(el => {
+            el.onclick = (event) => {
+                content.forEach(x => x.classList.remove("ke-tab-selected"));
+
+                content[this.index(event.currentTarget)].classList.add('ke-tab-selected');
+
+                content.forEach(x =>
+                    x.style.display = x.classList.contains("ke-tab-selected") ? "block" : "none"
+                );
+            };
+        });
+    }
+
+    /**
+     * Enable nav support.
+     */
+
+    nav(e) {
+        const header = e.currentTarget.closest('.header, .ke-header');
 
         if (header.classList.toggle('toggled')) {
             var navMobile = document.createElement('nav');
-            navMobile.innerHTML = header.querySelector('.nav, .nav').innerHTML;
-            navMobile.className = 'header-mobile fade-in';
+            navMobile.innerHTML = header.querySelector('.ke-nav').innerHTML;
+            navMobile.className = 'ke-header-mobile ke-fade-in';
             navMobile.style['margin-top'] = header.offsetHeight + 'px';
 
             header.appendChild(navMobile);
@@ -56,8 +66,8 @@ var kernel = kernel || {};
             function onMouseUp(e) {
                 if (
                     e.target != navMobile &&
-                    e.target != header.querySelector('.nav-toggle') &&
-                    e.target != header.querySelector('.nav-toggle i')
+                    e.target != header.querySelector(".nav-toggle, .ke-nav-toggle") &&
+                    e.target != header.querySelector(".nav-toggle i, .ke-nav-toggle i")
                 ) {
                     navMobile.remove();
                     header.classList.remove('toggled');
@@ -66,218 +76,22 @@ var kernel = kernel || {};
 
             window.addEventListener('mouseup', onMouseUp);
         } else {
-            header.querySelector('.header-mobile, .header-mobile').remove();
+            header.querySelector('.header-mobile, .ke-header-mobile').remove();
         }
-    };
-
-    /**
-     * Toggle the sidebar.
-     **/
-
-    app.toggleSidebar = function(e) {
-        var sidebar = e.currentTarget.closest(".sidebar");
-
-        if (sidebar.classList.toggle('active')) {
-            function onMouseUp(e) {
-                if (
-                    e.target != sidebar &&
-                    e.target != sidebar.querySelector('li:first-child') &&
-                    e.target != sidebar.querySelector('li:first-child i')
-                ) {
-                    sidebar.style.width = '60px';
-                    sidebar.classList.remove('active');
-                }
-            }
-
-            window.addEventListener('mouseup', onMouseUp);
-
-            sidebar.style.width = '220px';
-        } else {
-            sidebar.style.width = '60px';
-        }
-    };
-
-    app.tabs = function(tab) {
-        app.initTabs(document.querySelectorAll(tab));
-    };
-
-    app.initTabs = function(tabs) {
-        tabs.forEach(function(tab) {
-            var tabNavigation = tab.querySelectorAll('ul:first-child li');
-            var tabContent = tab.querySelectorAll('.tab, .tab');
-
-            tabNavigation.forEach(function(element) {
-                element.onclick = function(event) {
-                    tabContent.forEach(function(el) {
-                        el.classList.remove('tab-selected');
-                    });
-
-                    tabContent[getElementIndex(event.currentTarget)].classList.add('tab-selected');
-
-                    tabContent.forEach(function(el) {
-                        if (el.classList.contains('tab-selected')) {
-                            el.style.display = 'block';
-                        } else {
-                            el.style.display = 'none';
-                        }
-                    });
-                };
-            });
-        });
-    };
-
-    app.initSlideshows = function(slideshows) {
-        slideshows.forEach(function(slideshow) {
-            var slide = 0;
-
-            // slideshow.innerHTML += '<div class="prev">&lt;</div><div class="next">&gt;</div>';
-
-            var slides = slideshow.querySelectorAll('.slide');
-
-            for (var i = 0; i < slides.length; i++) {
-                var mouseX = 0;
-
-                slides[i].addEventListener("touchstart", function(event) {
-                    mouseX = event.changedTouches[0].pageX;
-                });
-
-                slides[i].addEventListener("touchend", function(event) {
-                    mouseX = mouseX - event.changedTouches[0].pageX;
-
-                    console.log(mouseX);
-
-                    if (mouseX > 30 && slide <= slides.length - 1) {
-                        slide++;
-                        for (var i = 0; i < slides.length; i++) {
-                            slides[i].style.left = '-' + slides[i].offsetWidth * slide + 'px';
-                        }
-                    } else if (mouseX < -30) {
-                        slide--;
-                        for (var i = 0; i < slides.length; i++) {
-                            slides[i].style.left = '-' + slides[i].offsetWidth * slide + 'px';
-                        }
-                    }
-                });
-            }
-
-            function updateSlideshow() {
-                var slides = slideshow.querySelectorAll('.slide');
-
-                if (slide > slides.length - 1) {
-                    slide = 0;
-                }
-
-                if (slide < 0) {
-                    slide = slides.length - 1;
-                }
-
-                for (var i = 0; i < slides.length; i++) {
-                    slides[i].style.display = 'none';
-
-                    if (i == slide) {
-                        slides[i].style.display = 'block';
-                    }
-                }
-            }
-
-            function addNav() {
-                var strnav = '';
-
-                strnav += '<ul class="nav">';
-                for (var i = 0; i < slideshow.querySelectorAll('.slide').length; i++) {
-                    strnav += '<li>' + '&#9679;' + '</li>';
-                }
-                strnav += '</ul>';
-
-                slideshow.innerHTML += strnav;
-            }
-
-            if (slideshow.dataset.nav == "true") {
-                addNav();
-
-                slideshow.querySelector('.prev').addEventListener('click', function() {
-                    slide --;
-                    updateSlideshow();
-                });
-
-                slideshow.querySelector('.next').addEventListener('click', function() {
-                    slide ++;
-                    updateSlideshow();
-                });
-            }
-
-            if (slideshow.dataset.auto == "true") {
-                setInterval(function() {
-                    slide++;
-                    updateSlideshow();
-                }, 5000);
-            }
-        });
-    };
-
-    /**
-     * Initializes dom elements.
-     **/
-
-    app.initEvents = function() {
-        var navToggle = document.querySelectorAll('.header .nav-toggle');
-        var sidebarToggle = document.querySelector('.sidebar ul li:first-child');
-        var notice = document.querySelectorAll('.notice .material-icons');
-        var tabs = document.querySelectorAll('.tabs');
-        var slideshows = document.querySelectorAll('.slideshow');
-
-        if (navToggle) {
-            navToggle.forEach(function(element) {
-                element.onclick = app.toggleNav;
-            });
-        }
-
-        if (sidebarToggle) {
-            sidebarToggle.onclick = app.toggleSidebar;
-        }
-
-        if (notice) {
-            notice.forEach(function(element) {
-                element.onclick = app.closeNotice;
-            });
-        }
-
-        if (tabs) {
-            app.initTabs(tabs);
-        }
-
-        if (slideshows) {
-            app.initSlideshows(slideshows);
-        }
-    };
-
-    app.init = function() {
-        app.initEvents();
-    };
-
-    /**
-     * Progressbar.
-     **/
-
-    function ProgressBar(el) {
-        this.el = document.querySelector(el);
     }
 
-    ProgressBar.prototype.setProgress = function(progress) {
-        this.el.querySelector('.progress, .progress').style.width = progress + '%';
-    };
-
-    app.ProgressBar = ProgressBar;
-
-    if (window.jQuery) {
-        jQuery.fn.extend({
-            ionTabs: function() {
-                this.each(function() {
-                    app.initTabs([this]);
-                });
-            }
-        });
+    notice(e) {
+        e.currentTarget.closest('.ke-notice').remove();
     }
-})(kernel);
 
-window.onload = kernel.init;
+    init() {
+        document.querySelectorAll(".tabs, .ke-tabs").forEach(x => this.tabs(x));
+        document.querySelector(".header .nav-toggle, .ke-header .ke-nav-toggle").onclick = this.nav;
+        document.querySelectorAll(".ke-notice i").forEach(x => x.onclick = this.notice);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const kernelcss = new KernelCSS();
+    kernelcss.init();
+});

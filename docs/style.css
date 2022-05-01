@@ -81,7 +81,7 @@ nav .github-icon {
     margin-right: 20px;
 }
 
-.grid-example .grid-example-item[class*='ion-col-']:last-of-type {
+.grid-example .grid-example-item[class*='ke-col-']:last-of-type {
     margin-right: 0;
 }
 
@@ -108,15 +108,15 @@ nav .github-icon {
     }
 }
 
-.ion-code-block .str { color: #27ae60; }
-.ion-code-block .kwd { color: #2980b9; }
-.ion-code-block .com { color: #c0392b; }
-.ion-code-block .typ { color: #8e44ad; }
-.ion-code-block .lit { color: #066; }
-.ion-code-block .pun, .ion-code-block .opn, .ion-code-block .clo { color: #660; }
-.ion-code-block .tag { color: #2980b9; }
-.ion-code-block .atn { color: #606; }
-.ion-code-block .atv { color: #080; }
-.ion-code-block .dec, .ion-code-block .var { color: #606; }
-.ion-code-block .fun { color: #800; }
-.ion-code-block .pln { color: #2c3e50; }
+.ke-code-block .str { color: #27ae60; }
+.ke-code-block .kwd { color: #2980b9; }
+.ke-code-block .com { color: #c0392b; }
+.ke-code-block .typ { color: #8e44ad; }
+.ke-code-block .lit { color: #066; }
+.ke-code-block .pun, .ke-code-block .opn, .ke-code-block .clo { color: #660; }
+.ke-code-block .tag { color: #2980b9; }
+.ke-code-block .atn { color: #606; }
+.ke-code-block .atv { color: #080; }
+.ke-code-block .dec, .ke-code-block .var { color: #606; }
+.ke-code-block .fun { color: #800; }
+.ke-code-block .pln { color: #2c3e50; }

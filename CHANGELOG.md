@@ -5,12 +5,13 @@
 - Add support for modals. (todo)
 - Add animation classes and API's. (todo)
 - Add methods for interfacing with jQuery. (todo)
+- Add a slideshow module. (todo)
+- Make .ke- prefix optional. (todo)
 
-## 0.7.0
-- Make .ion- prefix optional.
+## 1.0.0 (01-05-2022)
+- Make .ion- prefix .ke- prefix.
 - Add dropdown support to navigation.
 - Add .btn-outline class.
-- Add a slideshow module.
 
 ## 0.6.0 (03-09-2017)
 - Redo header navigation on small screen sizes.

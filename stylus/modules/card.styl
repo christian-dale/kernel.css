@@ -1,69 +1,66 @@
 .card {
-background-color: card.bg;
-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
-margin: 15px 0;
+	background-color: card.bg;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+	margin: 15px 0;
 
-.card-header {
-	height: 150px;
-	position: relative;
-	text-align: center;
+	.card-header {
+		height: 150px;
+		position: relative;
+		text-align: center;
 
-	bottom: 15px;
-	.header-title {
-		color: white;
-		font-size: 2.0em;
-		left: 15px;
-		position: absolute;
+		bottom: 15px;
+		.header-title {
+			color: white;
+			font-size: 2.0em;
+			left: 15px;
+			position: absolute;
+		}
+
+		img {
+			height: 150px;
+			object-fit: cover;
+			width: 100%;
+		}
+
+		h2 {
+			bottom: 0;
+			color: white;
+			font-size: 2.0em;
+			font-weight: normal;
+			margin: 0;
+			padding: 15px;
+			position: absolute;
+			text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+		}
 	}
 
-	img {
-		height: 150px;
-		object-fit: cover;
+	.card-content {
+		line-height: 1.5em;
+		padding: $main-padding;
+
+		hr {
+			border: 0;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+			border-top: 1px solid rgba(0, 0, 0, 0.1);
+			height: 0;
+		}
+	}
+
+	&.card-sm {
+		max-width: 100%;
+		width: 400px;
+	}
+
+	&.card-md {
+		max-width: 100%;
+		width: 600px;
+	}
+
+	&.card-lg {
 		width: 100%;
 	}
 
-	h2 {
-		bottom: 0;
-		color: white;
-		font-size: 2.0em;
-		font-weight: normal;
-		margin: 0;
-		padding: 15px;
-		position: absolute;
-		text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+	&.card-center {
+		margin: 0 auto;
 	}
-}
-
-.card-content {
-	line-height: 1.5em;
-	padding: $main-padding;
-
-	hr {
-		border: 0;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-		border-top: 1px solid rgba(0, 0, 0, 0.1);
-		height: 0;
-	}
-}
-
-h1, h2, h3, h4, h5, h6, p {
-}
-
-&.card-sm {
-	max-width: 100%;
-	width: 400px;
-}
-
-&.card-md {
-	max-width: 100%;
-	width: 600px;
-}
-
-&.card-lg {
-	width: 100%;
-}
-
-&.card-center {
-	margin: 0 auto;
-}
 }
