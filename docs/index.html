@@ -133,8 +133,8 @@
         <p>Default version</p>
 
         <pre class="ke-code ke-code-block prettyprint">
-<code>&lt;link rel="stylesheet" type="text/css" href="https://github.com/Ionogy/kernel.css" /&gt;
-&lt;script type="text/javascript" src="https://github.com/Ionogy/kernel.css"&gt;&lt;/script&gt;</code></pre>
+<code>&lt;link rel="stylesheet" type="text/css" href="kernel.css" /&gt;
+&lt;script type="text/javascript" src="kernel.js"&gt;&lt;/script&gt;</code></pre>
 
         <hr class="ke-hr">
         <h3>Base</h3>
@@ -317,27 +317,27 @@
 
         <pre class="ke-code ke-code-block prettyprint">
 <code>&lt;!-- Default Button --&gt;
-&lt;button class="button btn-default"&gt;Button&lt;/button&gt;
+&lt;button class="ke-button ke-btn-default"&gt;Button&lt;/button&gt;
 
 &lt;!-- Primary Button --&gt;
-&lt;button class="button btn-primary"&gt;Button&lt;/button&gt;
+&lt;button class="ke-button ke-btn-primary"&gt;Button&lt;/button&gt;
 
 &lt;!-- Safe Button --&gt;
-&lt;button class="button btn-safe"&gt;Button&lt;/button&gt;
+&lt;button class="ke-button ke-btn-safe"&gt;Button&lt;/button&gt;
 
 &lt;!-- Warning Button --&gt;
-&lt;button class="button btn-warning"&gt;Button&lt;/button&gt;
+&lt;button class="ke-button ke-btn-warning"&gt;Button&lt;/button&gt;
 
 &lt;!-- Risk Button --&gt;
-&lt;button class="button btn-risk"&gt;Button&lt;/button&gt;
+&lt;button class="ke-button ke-btn-risk"&gt;Button&lt;/button&gt;
 
 &lt;!-- Minimal Button --&gt;
-&lt;button class="button btn-minimal"&gt;Button&lt;/button&gt;
+&lt;button class="ke-button ke-btn-minimal"&gt;Button&lt;/button&gt;
 
 &lt;!-- Large button --&gt;
-Just append the "btn-lg" class to any of the button types.
+Just append the "ke-btn-lg" class to any of the button types.
 </code>
-You may also use the "button" class with anchor tags and button inputs,
+You may also use the "ke-button" class with anchor tags and button inputs,
 and you can extend the class if you want to customize your own buttons.
 </pre>
 
@@ -457,11 +457,11 @@ and you can extend the class if you want to customize your own buttons.
             <a href="#" class="ke-label ke-alert">Label</a>
 
             <pre class="ke-code ke-code-block prettyprint">
-<code>&lt;a class="label" href="#"&gt;Label&lt;a&gt;
-&lt;a class="label safe" href="#"&gt;Label&lt;a&gt;
-&lt;a class="label info" href="#"&gt;Label&lt;a&gt;
-&lt;a class="label warning" href="#"&gt;Label&lt;a&gt;
-&lt;a class="label alert" href="#"&gt;Label&lt;a&gt;</code></pre>
+<code>&lt;a class="ke-label" href="#"&gt;Label&lt;a&gt;
+&lt;a class="ke-label ke-safe" href="#"&gt;Label&lt;a&gt;
+&lt;a class="ke-label ke-info" href="#"&gt;Label&lt;a&gt;
+&lt;a class="ke-label ke-warning" href="#"&gt;Label&lt;a&gt;
+&lt;a class="ke-label ke-alert" href="#"&gt;Label&lt;a&gt;</code></pre>
 
             <hr class="ke-hr">
             <h2>Tags</h2>
@@ -471,7 +471,7 @@ and you can extend the class if you want to customize your own buttons.
             <a class="ke-tag" href="#">Quads</a>
 
             <pre class="ke-code ke-code-block prettyprint">
-<code>&lt;a class="tag" href="#"&gt;Biceps&lt;a&gt;</code></pre>
+<code>&lt;a class="ke-tag" href="#"&gt;Biceps&lt;a&gt;</code></pre>
 
         <hr class="ke-hr">
         <h3>Blockquote</h3>
@@ -480,8 +480,8 @@ and you can extend the class if you want to customize your own buttons.
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </blockquote>
 
-        <pre class="code code-block prettyprint">
-<code>&lt;blockquote class="blockquote"&gt;&lt;p&gt;...&lt;/p&gt;&lt;blockquote&gt;</code></pre>
+        <pre class="ke-code ke-code-block prettyprint">
+<code>&lt;blockquote class="ke-blockquote"&gt;&lt;p&gt;...&lt;/p&gt;&lt;blockquote&gt;</code></pre>
 
         <hr class="ke-hr">
         <h3>Utils</h3>
@@ -654,14 +654,14 @@ Code block
         <hr class="ke-hr">
         <h3>Progressbar</h3>
 
-        <div class="progressbar" id="progress-ex1">
-            <div class="ke-progress"></div>
+        <div class="ke-progressbar" id="progress-ex1">
+            <div class="ke-progress progress"></div>
         </div>
 
         <button class="ke-button ke-btn-default ke-section" id="btn-activate-progress" type="button" name="button">Activate Progressbar</button>
 
         <pre class="ke-code ke-code-block prettyprint">
-<code>&lt;div class="progressbar"&gt;
+<code>&lt;div class="ke-progressbar"&gt;
     &lt;div class="ke-progress" style="width: 75%"&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 

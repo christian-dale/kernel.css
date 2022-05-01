@@ -135,7 +135,7 @@ Please read the file called LICENSE.txt
 Contact
 =======
 Jim Christian:
- - jimchristian@hotmail.no
+ - inquiry@christiandale.me
 
 Changelog
 =========
