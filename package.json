@@ -8,8 +8,7 @@
         "compile": "stylus stylus/theme.styl -o build/kernel.css --prefix ke- --include-css",
         "watch": "stylus -w stylus/theme.styl -o build/kernel.css --prefix ke- --include-css",
         "lint": "stylint stylus",
-        "release": "npm run compile && node ./scripts/release.js",
-        "release-noprefix": "npm run compile-noprefix && node ./scripts/release.js"
+        "release": "npm run compile && node ./scripts/release.js"
     },
     "repository": {
         "type": "git",
