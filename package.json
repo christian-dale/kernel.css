@@ -8,7 +8,8 @@
         "compile": "stylus stylus/theme.styl -o build/kernel.css --prefix ke- --include-css",
         "watch": "stylus -w stylus/theme.styl -o build/kernel.css --prefix ke- --include-css",
         "lint": "stylint stylus",
-        "release": "npm run compile && node ./scripts/release.js"
+        "release": "npm run compile && node ./scripts/release.js && npm run minify",
+        "minify": "minify ./build/kernel.css > ./release/kernel.min.css && minify ./js/kernel.js > ./release/kernel.min.js"
     },
     "repository": {
         "type": "git",
@@ -26,8 +27,8 @@
     },
     "homepage": "https://github.com/Ionogy/kernel.css#readme",
     "dependencies": {
+        "minify": "^8.0.4",
         "stylint": "^2.0.0",
-        "stylus": "^0.56.0",
-        "minifier": "^0.8.1"
+        "stylus": "^0.56.0"
     }
 }
