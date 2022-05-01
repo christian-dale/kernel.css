@@ -6,7 +6,9 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "compile": "stylus stylus/theme.styl -o build/kernel.css --prefix ke- --include-css",
+        "compile-noprefix": "stylus stylus/theme.styl -o build/kernel-noprefix.css --include-css",
         "watch": "stylus -w stylus/theme.styl -o build/kernel.css --prefix ke- --include-css",
+        "watch-noprefix": "stylus -w stylus/theme.styl -o build/kernel-noprefix.css --include-css",
         "lint": "stylint stylus",
         "release": "npm run compile && node ./scripts/release.js",
         "release-noprefix": "npm run compile-noprefix && node ./scripts/release.js"
