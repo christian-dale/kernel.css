@@ -61,7 +61,7 @@ Navigation code example
     <div class="ke-container">
       <nav class="ke-nav">
         <ul>
-          <li class="ke-nav-active-state"><a href="#">Home</a></li>
+          <li><a href="#">Home</a></li>
           <li><a href="#">Download</a></li>
           <li><a href="#">Wiki</a></li>
           <li><a href="#">About us</a></li>
