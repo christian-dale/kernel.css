@@ -38,23 +38,22 @@
     }
 
     .nav-toggle {
-        background-color: #eee;
-        font-size: 1.1em;
+        display: none;
+    }
+
+    .nav-toggle:checked ~ .nav {
+        display: block;
+    }
+
+    .nav-toggle-hamburger {
+        background: transparent;
+        font-size: 1.8em;
         border-radius: 3px;
         border: 0;
         display: none;
         float: right;
-        margin-right: 15px;
         outline: none;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .nav {
-        > ul > li:hover {
-            border-bottom: 3px solid header.border-color;
-        }
+        cursor: pointer;
     }
 }
 
@@ -65,50 +64,46 @@
     padding-left: $main-padding;
 }
 
-.header-mobile {
-    background-color: #fff;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-    max-height: 50vh;
-
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-
-        li {
-            display: block;
-
-            a {
-                color: nav.link-color;
-                display: block;
-                font-size: 1.4em;
-                padding: 7px 15px;
-                text-decoration: none;
-                transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
-            }
-
-            a:hover {
-                background: nav.mobile-hover-bg;
-            }
-        }
-    }
-
-    .dropdown {
-        ul li {
-            padding-left: 25px;
-        }
-    }
-}
-
 @media (max-width: container.width-sm) {
     .header {
-        .nav {
-            display: none;
+        .nav-toggle-hamburger {
+            display: inline-block;
         }
 
-        .nav-toggle {
-            display: inline-block;
+        .nav {
+            display: none;
+            background-color: header.bg;
+            z-index: 999;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            overflow-y: auto;
+            max-height: 50vh;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+
+            ul li {
+                display: block;
+            }
+        }
+
+        &.header-xs .nav {
+            top: 49px;
+        }
+
+        &.header-sm .nav {
+            top: 61px;
+        }
+
+        &.header-md .nav {
+            top: 71px;
+        }
+
+        &.header-lg .nav {
+            top: 97px;
+        }
+
+        &.header-xl .nav {
+            top: 151px;
         }
     }
 }
