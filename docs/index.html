@@ -17,9 +17,10 @@
     <!-- <div class="scroll-indicator"></div> -->
 
     <header class="ke-header ke-header-sm">
-        <button class="ke-nav-toggle">☰</button>
-
         <div class="ke-container">
+            <input class="ke-nav-toggle" id="ke-nav-toggle" type="checkbox">
+            <label for="ke-nav-toggle" class="ke-nav-toggle-hamburger"><span>☰</span></label>
+
             <nav class="ke-nav">
                 <ul>
                     <li>
@@ -34,7 +35,7 @@
                         </div> -->
                     </li>
                     <li>
-                        <a href="https://github.com/Ionogy/kernel.css/releases">Downloads</a>
+                        <a href="https://github.com/Ionogy/kernel.css/blob/master/README.md">Docs</a>
 
                         <!-- <div class="dropdown">
                             <ul>
@@ -51,7 +52,7 @@
                         </div> -->
                     </li>
                     <li>
-                        <a href="https://github.com/Ionogy/kernel.css/blob/master/README.md">Docs</a>
+                        <a href="#about">About</a>
 
                         <!-- <div class="dropdown">
                             <ul>
@@ -128,13 +129,10 @@
 
         <hr class="ke-hr">
         <h3>Installation</h3>
-        <p>Add the following css and js tags to your html page.</p>
-
-        <p>Default version</p>
+        <p>Add the following css tag to your html page.</p>
 
         <pre class="ke-code ke-code-block prettyprint">
-<code>&lt;link rel="stylesheet" type="text/css" href="kernel.css" /&gt;
-&lt;script type="text/javascript" src="kernel.js"&gt;&lt;/script&gt;</code></pre>
+<code>&lt;link rel="stylesheet" type="text/css" href="kernel.css" /&gt;</code></pre>
 
         <hr class="ke-hr">
         <h3>Base</h3>
@@ -251,7 +249,7 @@
             <div class="ke-container">
                 <nav class="ke-nav">
                     <ul>
-                        <li class="ke-nav-active-state">
+                        <li>
                             <a href="/kernel.css">Home</a>
                         </li>
                         <li>
