@@ -8,6 +8,9 @@
 - Add a slideshow module. (todo)
 - Make .ke- prefix optional. (todo)
 
+## 2.0.0 (28-01-2023)
+- Remove opinionated styles.
+
 ## 1.0.0 (01-05-2022)
 - Make .ion- prefix .ke- prefix.
 - Add dropdown support to navigation.
