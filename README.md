@@ -134,8 +134,9 @@ Please read the file called LICENSE.txt
 
 Contact
 =======
-Jim Christian:
- - inquiry@christiandale.me
+Christian Dale
+ - Web: https://christiandale.me
+ - Email: inquiry@christiandale.me
 
 Changelog
 =========
