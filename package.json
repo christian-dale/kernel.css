@@ -5,11 +5,11 @@
     "stylintrc": ".stylintrc",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "compile": "stylus stylus/theme.styl -o build/kernel.css --prefix ke- --include-css",
+        "build": "stylus stylus/theme.styl -o build/kernel.css --prefix ke- --include-css",
         "watch": "stylus -w stylus/theme.styl -o build/kernel.css --prefix ke- --include-css",
         "lint": "stylint stylus",
-        "release": "npm run compile && node ./scripts/release.js && npm run minify",
-        "minify": "minify ./build/kernel.css > ./release/kernel.min.css && minify ./js/kernel.js > ./release/kernel.min.js"
+        "release": "npm run build && npm run minify",
+        "minify": "minify ./build/kernel.css > ./build/kernel.min.css"
     },
     "repository": {
         "type": "git",
