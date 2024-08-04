@@ -7,10 +7,23 @@
     <meta name="theme-color" content="#2979ff">
     <meta property="og:title" content="The kernel.css Framework">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
-    <link rel="stylesheet" type="text/css" href="kernel.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
+    <!-- Load different kernel.css stylesheet based on the environment -->
+    <script>
+        const cssLink = document.createElement("link");
+        cssLink.rel = "stylesheet";
+        cssLink.type = "text/css";
+
+        if (location.href.startsWith("file://")) { // Development
+            cssLink.href = "../build/kernel.css";
+        } else { // Production
+            cssLink.href = "https://cdn.jsdelivr.net/gh/Ionogy/kernel.css@1.0.0/build/kernel.min.css";
+        }
+
+        document.head.appendChild(cssLink);
+    </script>
 </head>
 
 <body class="ke-base">
