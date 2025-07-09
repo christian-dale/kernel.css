@@ -42,14 +42,14 @@ continue to be improved upon. We hope you will find it useful.
 Installation
 ============
 Simple. Just include these tags in your html.
-```
+```html
 <link rel="stylesheet" type="text/css" href="kernel.css" />
 <script type="text/javascript" src="kernel.js"></script>
 ```
 
 Navigation code example
 -----------
-```
+```html
 <body class="ke-base">
   <header class="ke-header ke-header-sm">
     <div class="ke-header-brand">kernel.css</div>
