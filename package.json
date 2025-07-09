@@ -13,7 +13,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Ionogy/kernel.css.git"
+        "url": "git+https://github.com/christian-dale/kernel.css.git"
     },
     "keywords": [
         "CSS",
@@ -23,9 +23,9 @@
     "author": "Jim Christian",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/Ionogy/kernel.css/issues"
+        "url": "https://github.com/christian-dale/kernel.css/issues"
     },
-    "homepage": "https://github.com/Ionogy/kernel.css#readme",
+    "homepage": "https://github.com/christian-dale/kernel.css#readme",
     "dependencies": {
         "minify": "^11.4.0",
         "stylint": "^2.0.0",
