@@ -135,8 +135,8 @@ Please read the file called LICENSE.txt
 Contact
 =======
 Christian Dale
- - Web: https://christiandale.me
- - Email: inquiry@christiandale.me
+ - Web: https://christiandale.no
+ - Email: post@christiandale.no
 
 Changelog
 =========
