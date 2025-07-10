@@ -4,6 +4,7 @@
 .card {
 	background-color: map.get(theme.$card, "bg");
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+	border-radius: 5px;
 	margin: 15px 0;
 
 	.card-header {
@@ -23,6 +24,8 @@
 			height: 150px;
 			object-fit: cover;
 			width: 100%;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
 		}
 
 		h2 {
