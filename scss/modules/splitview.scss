@@ -1,3 +1,5 @@
+@use "../base/grid";
+
 .splitview {
     @extend .grid;
     margin: 0;

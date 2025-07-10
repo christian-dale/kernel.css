@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "../theme.scss";
+
 /*
   Function for returning color.
 
@@ -9,9 +12,9 @@
   @return value of color in hex format.
 */
 
-getcolor(key) {
-    if colors[key] {
-        return colors[key];
+@function getcolor($key) {
+    @if map.has-key(theme.$colors, $key) {
+        @return map.get(theme.$colors, $key);
     }
 }
 
@@ -20,8 +23,8 @@ getcolor(key) {
   and creates a css class for each color.
 */
 
-for key, value in colors {
-    .bg-{key} {
-        background-color: value !important;
+@each $key, $val in theme.$colors {
+    .bg-#{$key} {
+        background-color: $val !important;
     }
 }

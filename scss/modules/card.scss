@@ -1,5 +1,8 @@
+@use "sass:map";
+@use "../theme";
+
 .card {
-	background-color: card.bg;
+	background-color: map.get(theme.$card, "bg");
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
 	margin: 15px 0;
 
@@ -7,8 +10,8 @@
 		height: 150px;
 		position: relative;
 		text-align: center;
-
 		bottom: 15px;
+
 		.header-title {
 			color: white;
 			font-size: 2.0em;
@@ -36,7 +39,7 @@
 
 	.card-content {
 		line-height: 1.5em;
-		padding: $main-padding;
+		padding: theme.$main-padding;
 
 		hr {
 			border: 0;

@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "../theme";
+
 .tabs {
     border: 1px solid #eee;
     border-radius: 5px;
@@ -16,7 +19,7 @@
             }
 
             >a {
-                color: base.font-color;
+                color: map.get(theme.$base, "font-color");
                 text-decoration: none;
                 cursor: pointer;
             }

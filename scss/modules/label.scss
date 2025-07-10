@@ -1,0 +1,35 @@
+@use "sass:map";
+@use "../theme";
+
+.label {
+    border: 1px solid #bdbdbd;
+    border-radius: 3px;
+    color: #bdbdbd;
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: 600;
+    min-width: 95px;
+    padding: 5px 7px;
+    text-align: center;
+    text-decoration: none;
+
+    &.safe {
+        border-color: map.get(theme.$label, "safe-bg");
+        color: map.get(theme.$label, "safe-bg");
+    }
+
+    &.info {
+        border-color: map.get(theme.$label, "info-bg");
+        color: map.get(theme.$label, "info-bg");
+    }
+
+    &.alert {
+        border-color: map.get(theme.$label, "alert-bg");
+        color: map.get(theme.$label, "alert-bg");
+    }
+
+    &.warning {
+        border-color: map.get(theme.$label, "warning-bg");
+        color: map.get(theme.$label, "warning-bg");
+    }
+}

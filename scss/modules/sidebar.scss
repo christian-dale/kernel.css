@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "../theme";
+
 .sidebar {
 	box-shadow: 0 1px 4px 0 rgba(0.0, 0, 0, 0.37);
 	height: 100vh;
@@ -36,7 +39,7 @@
 			.sidebar-toggle, i {
 				cursor: pointer;
 				text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
-				color: sidebar.icon-color;
+				color: map.get(theme.$sidebar, "icon-color");
 				font-size: 24px;
 				line-height: 48px;
 				padding-left: 18px;
@@ -51,7 +54,7 @@
 			}
 
 			.item-name {
-				color: sidebar.item-name-color;
+				color: map.get(theme.$sidebar, "item-name-color");
 				display: inline;
 				font-weight: normal;
 				line-height: 48px;
@@ -62,7 +65,7 @@
 
 		li:hover {
 			background: rgba(255, 255, 255, 0.07);
-			border-left: 3px solid sidebar.item-hover-border-color;
+			border-left: 3px solid map.get(theme.$sidebar, "item-hover-border-color");
 		}
 	}
 }

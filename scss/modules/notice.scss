@@ -1,6 +1,9 @@
+@use "sass:map";
+@use "../theme";
+
 .notice {
     animation: fadein 0.5s;
-    background: notice.bg;
+    background: map.get(theme.$notice, "bg");
     border-radius: 3px;
     box-sizing: border-box;
     color: #212121;
@@ -11,21 +14,21 @@
     z-index: 999;
 
     &.safe {
-        background: notice.safe-bg;
+        background: map.get(theme.$notice, "safe-bg");
     }
 
     &.info {
-        background: notice.info-bg;
-        color: notice.color;
+        background: map.get(theme.$notice, "info-bg");
+        color: map.get(theme.$notice, "color");
     }
 
     &.alert {
-        background: notice.alert-bg;
-        color: notice.color;
+        background: map.get(theme.$notice, "alert-bg");
+        color: map.get(theme.$notice, "color");
     }
 
     &.warning {
-        background: notice.warning-bg;
+        background: map.get(theme.$notice, "warning-bg");
     }
 
     .material-icons {

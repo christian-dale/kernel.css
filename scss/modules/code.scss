@@ -1,15 +1,18 @@
+@use "sass:map";
+@use "../theme";
+
 .code {
 	background-color: #fafafa;
 	border-radius: 5px;
-	color: code.color;
+	color: map.get(theme.$code, "color");
 	display: inline-block;
 	font-family: monospace;
-	line-height: base.line-height;
+	line-height: map.get(theme.$base, "line-height");
 
 	&.code-block {
-		background-color: code.block-bg;
+		background-color: map.get(theme.$code, "block-bg");
 		box-sizing: border-box;
-		color: code.block-color;
+		color: map.get(theme.$code, "block-color");
 		overflow-x: auto;
 		padding: 15px;
 		white-space: pre-wrap;

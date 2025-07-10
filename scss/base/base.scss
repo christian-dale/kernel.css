@@ -1,10 +1,14 @@
+@use "sass:map";
+@use "../theme";
+@use "util";
+
 .base {
-    color: base.font-color;
-    font: base.font-size base.font;
+    color: map.get(theme.$base, "font-color");
+    font: map.get(theme.$base, "font-size") map.get(theme.$base, "font");
     margin: 0;
 
     p {
-        line-height: base.line-height;
+        line-height: map.get(theme.$base, "line-height");
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -46,8 +50,8 @@
 }
 
 .modern {
-    color: base.font-color;
-    font: base.font-size base.font;
+    color: map.get(theme.$base, "font-color");
+    font: map.get(theme.$base, "font-size") map.get(theme.$base, "font");
     margin: 0;
 
     -moz-osx-font-smoothing: grayscale;
@@ -55,7 +59,7 @@
 
     p {
         font-size: 1.05em;
-        line-height: base.line-height;
+        line-height: map.get(theme.$base, "line-height");
     }
 
     h1, h2, h3, h4, h5, h6 {

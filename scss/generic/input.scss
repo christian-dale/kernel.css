@@ -1,5 +1,8 @@
+@use "sass:map";
+@use "../theme";
+
 .input-text {
-    background: input.bg;
+    background: map.get(theme.$input, "bg");
     border: 1px solid #eee;
     border-radius: 3px;
     box-sizing: border-box;
@@ -17,7 +20,7 @@
 }
 
 .select {
-    background: input.bg;
+    background: map.get(theme.$input, "bg");
     border: 1px solid #eee;
     border-radius: 3px;
     color: #757575;

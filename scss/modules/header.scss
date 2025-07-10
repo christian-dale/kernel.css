@@ -1,8 +1,11 @@
+@use "sass:map";
+@use "../theme";
+
 /* The header class is intended for use on the top of the page,
     and not anywhere else. It's usually accompanied by a navigation bar */
 
 .header {
-    background-color: header.bg;
+    background-color: map.get(theme.$header, "bg");
     // box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.20);
     display: inline-block;
     height: 60px;
@@ -60,11 +63,11 @@
 .header-brand {
     float: left;
     font-family: inherit;
-    font-size: $brand-font-size;
-    padding-left: $main-padding;
+    font-size: theme.$brand-font-size;
+    padding-left: theme.$main-padding;
 }
 
-@media (max-width: container.width-sm) {
+@media (max-width: map.get(theme.$container, "width-sm")) {
     .header {
         .nav-toggle-hamburger {
             display: inline-block;
@@ -72,7 +75,7 @@
 
         .nav {
             display: none;
-            background-color: header.bg;
+            background-color: map.get(theme.$header, "bg");
             z-index: 999;
             position: absolute;
             left: 0;
