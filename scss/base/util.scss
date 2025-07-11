@@ -2,8 +2,8 @@
 @use "../theme";
 
 /*
-    * kernel.css utility classes.
-*/
+ * kernel.css utility classes.
+ */
 
 .anchor {
     color: map.get(theme.$util, "anchor-color");
