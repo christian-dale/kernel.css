@@ -81,7 +81,7 @@ $btn-safe: (
 );
 
 $btn-warning: (
-    bg: map.get($colors, "yellow")
+    bg: map.get($colors, "amber")
 );
 
 $btn-risk: (
@@ -122,10 +122,10 @@ $card: (
 $notice: (
     color: #fafafa,
     bg: #eee,
-    safe-bg: map.get($colors, "green"),
-    info-bg: map.get($colors, "cyan"),
-    alert-bg: map.get($colors, "red"),
-    warning-bg: map.get($colors, "yellow")
+    safe-bg: #00e676,
+    info-bg: #2196f3,
+    alert-bg: #ff5252,
+    warning-bg: #ffee58
 );
 
 $label: $notice;
