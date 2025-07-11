@@ -6,6 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "sass scss/main.scss build/kernel.css && postcss build/kernel.css -o build/kernel.css",
+        "serve": "serve",
         "lint": "stylelint scss",
         "release": "npm run build && npm run minify",
         "minify": "minify ./build/kernel.css > ./build/kernel.min.css"
@@ -31,6 +32,7 @@
         "postcss-cli": "^11.0.1",
         "postcss-prefix-selector": "^2.1.1",
         "sass": "^1.89.2",
+        "serve": "^14.2.4",
         "stylelint": "^16.21.1",
         "stylelint-config-standard-scss": "^15.0.1"
     }

@@ -97,12 +97,15 @@ nav .github-icon {
     .hero {
         height: 100%;
     }
+
     .block-spacing {
         margin-bottom: 0;
     }
+
     .grid-example {
         margin: 15px 0;
     }
+
     .grid-example .grid-example-item {
         margin: 10px 0;
     }
