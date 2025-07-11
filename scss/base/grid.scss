@@ -4,21 +4,15 @@
 
 .grid {
 	@extend .section;
-	display: flex;
+	display: grid;
+	grid-gap: calc(theme.$main-padding * 2);
+	grid-template-columns: repeat(12, 1fr);
 
-	@for $i from 1 through 17 {
+	@for $i from 1 through 12 {
 		.col-#{$i} {
-			flex: $i;
+			grid-column: span $i;
 		}
 	}
-}
-
-[class*='col-'] {
-	margin-right: theme.$main-padding * 2;
-}
-
-[class*='col-']:last-of-type {
-	margin-right: 0;
 }
 
 .container {
@@ -41,7 +35,7 @@
 /* For small screen sizes */
 @media (max-width: map.get(theme.$container, "width-sm")) {
 	.grid {
-		flex-direction: column;
+		grid-template-columns: 1fr;
 	}
 
 	.container {
