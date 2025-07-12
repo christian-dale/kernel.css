@@ -2,14 +2,13 @@
     "name": "kernel.css",
     "version": "1.0.0",
     "description": "The CSS library built for any kind of task",
-    "stylintrc": ".stylintrc",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "sass scss/main.scss build/kernel.css && postcss build/kernel.css -o build/kernel.css",
+        "build": "sass scss/main.scss build/kernel.css && postcss build/kernel.css -o build/kernel.css && npm run minify",
+        "watch": "sass --watch scss/main.scss build/kernel.css",
         "serve": "serve",
         "lint": "stylelint scss",
-        "release": "npm run build && npm run minify",
-        "minify": "minify ./build/kernel.css > ./build/kernel.min.css"
+        "minify": "postcss -u cssnano --no-map build/kernel.css -o build/kernel.min.css"
     },
     "repository": {
         "type": "git",
@@ -27,7 +26,7 @@
     },
     "homepage": "https://github.com/christian-dale/kernel.css#readme",
     "devDependencies": {
-        "minify": "^14.0.0",
+        "cssnano": "^7.0.7",
         "postcss": "^8.5.6",
         "postcss-cli": "^11.0.1",
         "postcss-prefix-selector": "^2.1.1",
