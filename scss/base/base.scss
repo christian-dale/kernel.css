@@ -6,6 +6,8 @@
     color: map.get(theme.$base, "font-color");
     font: map.get(theme.$base, "font-size") map.get(theme.$base, "font");
     margin: 0;
+
+    -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 
     p {

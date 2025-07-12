@@ -4,10 +4,10 @@
     github.com/ionogy/kernel.css
 */
 
-// http://easings.net/en
+/** Easing functions from http://easings.net */
 
 /* Base uses */
-@use "base/variables";
+@use "base/colors";
 @use "base/util";
 @use "base/base";
 @use "base/grid";
@@ -21,17 +21,12 @@
 @use "modules/header";
 @use "modules/nav";
 @use "modules/hero";
-@use "modules/sidebar";
-@use "modules/splitview";
 @use "modules/card";
 @use "modules/table";
-@use "modules/footer";
 @use "modules/notice";
 @use "modules/code";
 @use "modules/progress";
-@use "modules/message";
-@use "modules/tabs";
+@use "modules/accordion";
 @use "modules/label";
 @use "modules/tag";
 @use "modules/blockquote";
-// @use "modules/slideshow";

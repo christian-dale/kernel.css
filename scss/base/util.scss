@@ -28,6 +28,18 @@
     margin: theme.$main-padding 0;
 }
 
+.section-lg {
+    margin: theme.$main-padding * 2 0;
+}
+
+.content {
+    padding: theme.$main-padding 0;
+}
+
+.content-lg {
+    padding: theme.$main-padding * 2 0;
+}
+
 .noshadow {
     box-shadow: none;
     text-shadow: none;

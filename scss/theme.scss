@@ -1,36 +1,24 @@
 @use "sass:map";
+@use "sass:color";
 
 // ====
 // BASE
 // ====
 
 $colors: (
-    "red":          #f44336,
-    "pink":         #e91e63,
-    "purple":       #9c27b0,
-    "deep-purple":  #673ab7,
-    "indigo":       #3f51b5,
-    "blue":         #2196f3,
-    "light-blue":   #03a9f4,
-    "cyan":         #00bcd4,
-    "teal":         #009688,
-    "green":        #4caf50,
-    "light-green":  #8bc34a,
-    "lime":         #cddc39,
-    "yellow":       #ffeb3b,
-    "amber":        #ffc107,
-    "orange":       #ff9800,
-    "deep-orange":  #ff5722,
-    "brown":        #795548,
-    "grey":         #9e9e9e,
-    "blue-grey":    #607d8b,
-    "black":        #000000,
-    "white":        #ffffff,
-    "transparent":  transparent
+    "default": #f5f5f5,
+    "dark": #232e33,
+
+    "info": #1cb4fb,
+    "safe": #28dd74,
+    "warning": #ffcb1e,
+    "alert": #f44336,
+
+    "link": #018fe8
 );
 
 $base: (
-    font-color: #263238,
+    font-color: #232e33,
     font-size: 1em,
     line-height: 1.6,
     font: ('Segoe UI', 'San Francisco', 'Helvetica Neue', 'Arial', 'sans-serif')
@@ -46,7 +34,7 @@ $container: (
 
 $util: (
     hr-bg: #eee,
-    anchor-color: #0091ea
+    anchor-color: map.get($colors, "link")
 );
 
 // =======
@@ -66,19 +54,19 @@ $btn-default: (
 );
 
 $btn-primary: (
-    bg: map.get($colors, "cyan")
+    bg: map.get($colors, "info")
 );
 
 $btn-safe: (
-    bg: map.get($colors, "green")
+    bg: map.get($colors, "safe")
 );
 
 $btn-warning: (
-    bg: map.get($colors, "amber")
+    bg: map.get($colors, "warning")
 );
 
 $btn-risk: (
-    bg: map.get($colors, "red")
+    bg: map.get($colors, "alert")
 );
 
 // Inputs
@@ -105,7 +93,7 @@ $header: (
 $footer: (
     header-bg: #f5f5f5,
     header-color: #212121,
-    link-color: #2196f3
+    link-color: map.get($colors, "link")
 );
 
 $card: (
@@ -115,10 +103,10 @@ $card: (
 $notice: (
     color: #fafafa,
     bg: #eee,
-    safe-bg: #00e676,
-    info-bg: #2196f3,
-    alert-bg: #ff5252,
-    warning-bg: #ffee58
+    safe-bg: map.get($colors, "safe"),
+    info-bg: map.get($colors, "info"),
+    warning-bg: map.get($colors, "warning"),
+    alert-bg: map.get($colors, "alert")
 );
 
 $label: $notice;
@@ -129,15 +117,9 @@ $message: (
 
 $code: (
     bg: #fce4ec,
-    color: #e91e63,
+    color: #ef2669,
     block-bg: #f5f5f5,
     block-color: #212121
-);
-
-$sidebar: (
-    icon-color: #fff,
-    item-name-color: #fff,
-    item-hover-border-color: #448aff
 );
 
 $table: (
@@ -147,6 +129,6 @@ $table: (
 
 $progressbar: (
     bg: #f5f5f5,
-    progress-bg: #2196f3,
+    progress-bg: #018fe8,
     progress-color: #fff
 );

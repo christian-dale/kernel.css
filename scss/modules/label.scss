@@ -1,10 +1,11 @@
 @use "sass:map";
 @use "../theme";
+@use "../base/colors";
 
 a.label {
     border: 1px solid #bdbdbd;
     border-radius: 3px;
-    color: #bdbdbd;
+    color: colors.getcolor("dark");
     display: inline-block;
     font-size: 0.9em;
     min-width: 95px;
@@ -13,22 +14,22 @@ a.label {
     text-decoration: none;
 
     &.safe {
-        border-color: map.get(theme.$label, "safe-bg");
-        color: map.get(theme.$label, "safe-bg");
+        border-color: map.get(theme.$colors, "safe");
+        color: map.get(theme.$colors, "safe");
     }
 
     &.info {
-        border-color: map.get(theme.$label, "info-bg");
-        color: map.get(theme.$label, "info-bg");
-    }
-
-    &.alert {
-        border-color: map.get(theme.$label, "alert-bg");
-        color: map.get(theme.$label, "alert-bg");
+        border-color: map.get(theme.$colors, "info");
+        color: colors.getcolor("info");
     }
 
     &.warning {
-        border-color: map.get(theme.$label, "warning-bg");
-        color: map.get(theme.$label, "warning-bg");
+        border-color: map.get(theme.$colors, "warning");
+        color: map.get(theme.$colors, "warning");
+    }
+
+    &.alert {
+        border-color: map.get(theme.$colors, "alert");
+        color: map.get(theme.$colors, "alert");
     }
 }

@@ -30,12 +30,11 @@
     &.warning {
         background: map.get(theme.$notice, "warning-bg");
     }
-}
 
-.notice-close {
-    float: right;
-    font-size: 20px;
-    cursor: pointer;
+    .notice-close {
+        cursor: pointer;
+        float: right;
+    }
 }
 
 @keyframes fadein {

@@ -1,40 +1,22 @@
 @use "sass:map";
 @use "../theme";
 
-.input-text {
-    background: map.get(theme.$input, "bg");
-    border: 1px solid #eee;
-    border-radius: 3px;
-    box-sizing: border-box;
-    display: block;
-    font-family: inherit;
-    margin: 15px 0;
-    width: 100%;
-    padding: 8px;
-    transition: border 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+.input {
+	background: map.get(theme.$input, "bg");
+	color: #757575;
+	border: 1px solid #eee;
+	border-radius: 3px;
+	display: block;
+	font-family: inherit;
+	margin: 15px 0;
+	width: 100%;
+	padding: 8px;
+	box-sizing: border-box;
+	transition: border 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+	-webkit-appearance: none;
 
-    &:focus {
-        border: 1px solid #0091ea;
-        outline: 0;
-    }
-}
-
-.select {
-    background: map.get(theme.$input, "bg");
-    border: 1px solid #eee;
-    border-radius: 3px;
-    color: #757575;
-    display: block;
-    font-family: inherit;
-    margin: 15px 0;
-    padding: 8px;
-    padding-left: 5px;
-    width: 100%;
-
-    -webkit-appearance: none;
-
-    &:focus {
-        border: 1px solid #0091ea;
-        outline: 0;
-    }
+	&:focus {
+		border: 1px solid map.get(theme.$colors, "link");
+		outline: 0;
+	}
 }

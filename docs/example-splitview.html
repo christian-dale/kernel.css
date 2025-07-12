@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Blog</title>
-    <link rel="stylesheet" type="text/css" href="kernel.css" />
+    <script src="kernel-loader.js"></script>
     <style media="screen">
         h1,
         h2,
@@ -24,7 +24,7 @@
         }
 
         .main-header {
-            background: url(https://source.unsplash.com/HWIOLU7_O6w/1600x900) no-repeat center center fixed;
+            background: url("aearial.jpg") no-repeat center center fixed;
             background-size: cover;
             height: 100vh;
         }
@@ -57,14 +57,14 @@
 </head>
 
 <body class="ke-base">
-    <div class="ke-splitview">
-        <div class="ke-splitview-main main-header">
+    <div class="ke-grid">
+        <div class="ke-col-6 main-header">
             <div class="ke-container">
                 <h1>The Kernel Blog</h1>
             </div>
         </div>
 
-        <div class="main-content blog-area">
+        <div class="ke-col-6 blog-area">
             <div class="ke-container">
                 <section>
                     <h2><a href="#" class="ke-anchor">CSS box-shadow</a></h2>
@@ -102,8 +102,6 @@
             </div>
         </div>
     </div>
-
-    <script src="kernel.js"></script>
 </body>
 
 </html>

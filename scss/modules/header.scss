@@ -6,7 +6,6 @@
 
 .header {
     background-color: map.get(theme.$header, "bg");
-    // box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.20);
     display: inline-block;
     height: 60px;
     line-height: 60px;
@@ -58,13 +57,13 @@
         outline: none;
         cursor: pointer;
     }
-}
 
-.header-brand {
-    float: left;
-    font-family: inherit;
-    font-size: theme.$brand-font-size;
-    padding-left: theme.$main-padding;
+    .header-brand {
+        float: left;
+        font-family: inherit;
+        font-size: theme.$brand-font-size;
+        padding-left: theme.$main-padding;
+    }
 }
 
 @media (max-width: map.get(theme.$container, "width-sm")) {
@@ -82,10 +81,22 @@
             width: 100%;
             overflow-y: auto;
             max-height: 50vh;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            border-bottom: 1px solid #eee;
 
             ul li {
                 display: block;
+            }
+
+            .dropdown {
+                display: block;
+                position: static;
+                border: none;
+                margin-left: 15px;
+
+                ul li a::before {
+                    padding-right: 0.5em;
+                    display: inline-block;
+                }
             }
         }
 

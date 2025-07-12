@@ -19,12 +19,29 @@
 }
 
 /*
-  Loops over the $colors int a map,
-  and creates a css class for each color.
-*/
+ * Color utility classes for background colors.
+ */
 
-@each $key, $val in theme.$colors {
-    .bg-#{$key} {
-        background-color: $val !important;
-    }
+.bg-default {
+    background-color: getcolor("default");
+}
+
+.bg-dark {
+    background-color: getcolor("dark");
+}
+
+.bg-info {
+    background-color: getcolor("info");
+}
+
+.bg-safe {
+    background-color: getcolor("safe");
+}
+
+.bg-warning {
+    background-color: getcolor("warning");
+}
+
+.bg-alert {
+    background-color: getcolor("alert");
 }

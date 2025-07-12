@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
-    <link rel="stylesheet" type="text/css" href="../build/kernel.css" />
+    <script src="/docs/kernel-loader.js"></script>
     <style media="screen">
         .color-block {
             border-radius: 100%;
@@ -19,7 +19,7 @@
 
 <body class="ke-base">
     <div class="ke-splitview">
-        <div class="ke-sidebar ke-bg-teal">
+        <div class="ke-sidebar ke-bg-default">
             <ul>
                 <li>
                     <i class="ke-material-icons">polymer</i>
@@ -87,47 +87,35 @@
 
                 <section>
                     <h2>Colors</h2>
-                    <div class="color-block ke-bg-red"></div>
-                    <div class="color-block ke-bg-pink"></div>
-                    <div class="color-block ke-bg-purple"></div>
-                    <div class="color-block ke-bg-deep-purple"></div>
-                    <div class="color-block ke-bg-indigo"></div>
-                    <div class="color-block ke-bg-blue"></div>
-                    <div class="color-block ke-bg-light-blue"></div>
-                    <div class="color-block ke-bg-cyan"></div>
-                    <div class="color-block ke-bg-teal"></div>
-                    <div class="color-block ke-bg-green"></div>
-                    <div class="color-block ke-bg-light-green"></div>
-                    <div class="color-block ke-bg-lime"></div>
-                    <div class="color-block ke-bg-yellow"></div>
-                    <div class="color-block ke-bg-amber"></div>
-                    <div class="color-block ke-bg-orange"></div>
-                    <div class="color-block ke-bg-deep-orange"></div>
-                    <div class="color-block ke-bg-brown"></div>
-                    <div class="color-block ke-bg-grey"></div>
-                    <div class="color-block ke-bg-blue-grey"></div>
-                    <div class="color-block ke-bg-black"></div>
-                    <div class="color-block ke-bg-white"></div>
-                    <div class="color-block ke-bg-transparent"></div>
+                    <div class="color-block ke-bg-default"></div>
+                    <div class="color-block ke-bg-base"></div>
+                    <div class="color-block ke-bg-info"></div>
+                    <div class="color-block ke-bg-safe"></div>
+                    <div class="color-block ke-bg-warning"></div>
+                    <div class="color-block ke-bg-alert"></div>
                 </section>
 
                 <section>
                     <h2>Cards</h2>
-                    <div class="ke-card ke-card-lg">
+                    <div class="ke-card">
                         <div class="ke-card-content">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         </div>
                     </div>
 
-                    <div class="ke-card ke-card-sm">
-                        <div class="ke-card-header">
-                            <h2>Desolate landscape</h2>
-                            <img src="https://source.unsplash.com/n1fUGApCY0U/1600x900" alt="Desert landscape">
-                        </div>
-                        <div class="ke-card-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <a href="#" class="ke-button ke-btn-primary" style="width: 100%;">Button</a>
+                    <div class="ke-grid">
+                        <div class="ke-col-6">
+                            <div class="ke-card">
+                                <div class="ke-card-header">
+                                    <h2>Desolate landscape</h2>
+                                    <img src="/docs/desert.jpg" alt="Desert landscape">
+                                </div>
+                                <div class="ke-card-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <a href="#" class="ke-button ke-btn-primary" style="width: 100%;">Button</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -135,11 +123,11 @@
                 <section>
                     <h2>Grid</h2>
                     <div class="ke-grid">
-                        <div class="col-2">
+                        <div class="ke-col-6">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         </div>
-                        <div class="col-1">
+                        <div class="ke-col-6">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         </div>
@@ -174,6 +162,8 @@
                 </section>
 
                 <section>
+                    <h2>Table</h2>
+
                     <table class="ke-table">
                         <thead>
                             <tr>

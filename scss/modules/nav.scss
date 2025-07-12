@@ -2,7 +2,7 @@
 @use "../theme";
 
 .nav {
-    display: inline-block;
+    line-height: 60px;
 
     ul {
         list-style-type: none;
@@ -11,7 +11,6 @@
 
         li {
             display: inline-block;
-            transition: border 100ms cubic-bezier(0.165, 0.840, 0.440, 1.000);
 
             a {
                 color: map.get(theme.$nav, "link-color");
@@ -31,18 +30,12 @@
 
     .dropdown {
         background: map.get(theme.$header, "bg");
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        border: 1px solid #eee;
         display: none;
         position: absolute;
 
-        ul {
-            li {
-                display: block;
-
-                &:hover {
-                    background-color: #eee;
-                }
-            }
+        ul li {
+            display: block;
         }
     }
 }

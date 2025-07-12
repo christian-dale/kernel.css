@@ -7,29 +7,14 @@
     <meta name="theme-color" content="#2979ff">
     <meta property="og:title" content="The kernel.css library">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_circle_down" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <!-- Load different kernel.css stylesheet and script based on the environment -->
-    <script>
-        const cssLink = document.createElement("link");
-        cssLink.rel = "stylesheet";
-        cssLink.type = "text/css";
-
-        if (location.href.startsWith("http://localhost")) { // Development
-            cssLink.href = "/build/kernel.css";
-        } else { // Production
-            cssLink.href = "https://cdn.jsdelivr.net/gh/Ionogy/kernel.css@1.0.0/build/kernel.min.css";
-        }
-
-        document.head.appendChild(cssLink);
-    </script>
+    <script src="kernel-loader.js"></script>
 </head>
 
 <body class="ke-base">
-    <!-- <div class="scroll-indicator"></div> -->
-
     <header class="ke-header ke-header-sm">
         <div class="ke-container">
             <input class="ke-nav-toggle" id="ke-nav-toggle" type="checkbox">
@@ -39,51 +24,15 @@
                 <ul>
                     <li>
                         <a href="/kernel.css">Home</a>
-
-                        <!-- <div class="dropdown">
-                            <ul>
-                                <li>
-                                    <a href="#">lorem</a>
-                                </li>
-                            </ul>
-                        </div> -->
                     </li>
                     <li>
                         <a href="https://github.com/christian-dale/kernel.css/blob/master/README.md">Docs</a>
-
-                        <!-- <div class="dropdown">
-                            <ul>
-                                <li>
-                                    <a href="#">Latest version</a>
-                                </li>
-                                <li>
-                                    <a href="#">Legacy version</a>
-                                </li>
-                                <li>
-                                    <a href="#">Dev version</a>
-                                </li>
-                            </ul>
-                        </div> -->
                     </li>
                     <li>
                         <a href="#about">About</a>
-
-                        <!-- <div class="dropdown">
-                            <ul>
-                                <li>
-                                    <a href="#">Latest docs</a>
-                                </li>
-                                <li>
-                                    <a href="#">Legacy docs</a>
-                                </li>
-                                <li>
-                                    <a href="#">Dev docs</a>
-                                </li>
-                            </ul>
-                        </div> -->
                     </li>
                     <li>
-                        <a href="https://github.com/christian-dale/kernel.css"><img class="github-icon" src="GitHub-Mark.png" alt="GitHub"> GitHub</a>
+                        <a href="https://github.com/christian-dale/kernel.css"><i class="fa-brands fa-github-alt" style="margin-right: 5px;"></i> GitHub</a>
                     </li>
                 </ul>
             </nav>
@@ -94,7 +43,7 @@
         <div class="ke-container ke-vertical-center">
             <h3>kernel.css</h3>
             <p>Simplicity done right</p>
-            <a class="ke-button ke-btn-outline ke-btn-lg" draggable="false" href="https://github.com/christian-dale/kernel.css/releases"><span class="material-symbols-outlined" style="vertical-align: middle; padding-right: 10px; padding-bottom: 2px;">arrow_circle_down</span>Download</a>
+            <a class="ke-button ke-btn-outline ke-btn-lg" draggable="false" href="https://github.com/christian-dale/kernel.css/releases"><i class="fa-solid fa-circle-down" style="margin-right: 5px;"></i> Download</a>
         </div>
     </div>
 
@@ -106,7 +55,7 @@
             </div>
 
             <div class="ke-col-4 feature">
-                <h3 class="block-spacing">Far from reaching it's potential</h3>
+                <h3 class="block-spacing">Far from reaching its potential</h3>
                 <p>If you like this project and would like to help out, you may do so on <a href="https://github.com/christian-dale/kernel.css" class="ke-anchor">GitHub</a>. This project is ever improving.</p>
             </div>
 
@@ -129,15 +78,7 @@
 
             <div class="ke-col-4 feature">
                 <h3 class="block-spacing">Compatible with other frameworks</h3>
-                <p>Because kernel.css supports prefixes for all it's css classes (<code class="ke-code">ke-</code>), it can be used with most other CSS framework. Mix and match
-                    <svg style="height: 22px; vertical-align: middle; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
-                        <circle cx="32" cy="32" r="30" fill="#ffdd67" />
-                        <g fill="#664e27">
-                            <circle cx="20.5" cy="26.6" r="5" />
-                            <circle cx="43.5" cy="26.6" r="5" />
-                            <path d="m44.6 40.3c-8.1 5.7-17.1 5.6-25.2 0-1-.7-1.8.5-1.2 1.6 2.5 4 7.4 7.7 13.8 7.7s11.3-3.6 13.8-7.7c.6-1.1-.2-2.3-1.2-1.6" />
-                        </g>
-                        </svg></p>
+                <p>Because kernel.css supports prefixes for all it's css classes (<code class="ke-code">ke-</code>), it can be used with most other CSS framework. Mix and match <i class="fa-solid fa-face-smile-wink"></i></p>
             </div>
         </div>
 
@@ -244,6 +185,16 @@
             </div>
         </div>
 
+        <pre class="ke-code ke-code-block prettyprint">
+<code>&lt;div class="ke-grid"&gt;
+    &lt;div class="ke-col-8"&gt;
+        ...
+    &lt;/div&gt;
+    &lt;div class="ke-col-4"&gt;
+       ...
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
         <hr class="ke-hr">
         <h3>Nav</h3>
 
@@ -251,7 +202,20 @@
 
         <nav class="ke-nav ke-section">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="#">Home</a>
+
+                    <div class="ke-dropdown">
+                        <ul>
+                            <li>
+                                <a href="#">Item 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Item 2</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
                 <li><a href="#">Download</a></li>
                 <li><a href="#">About</a></li>
             </ul>
@@ -271,30 +235,54 @@
 
         <p>On small screen devices, the navigation gets hidden in a drawer that can be toggled by pressing the nav toggle button (hamburger icon).</p>
 
-        <div class="ke-header ke-header-sm" style="position: static;">
-            <button class="ke-nav-toggle">
-                <i class="material-icons">menu</i>
-            </button>
-
+        <div class="ke-header ke-header-sm">
             <div class="ke-container">
+                <input class="ke-nav-toggle" id="ke-nav-toggle" type="checkbox">
+                <label for="ke-nav-toggle" class="ke-nav-toggle-hamburger"><span>☰</span></label>
+
                 <nav class="ke-nav">
                     <ul>
                         <li>
-                            <a href="/kernel.css">Home</a>
+                            <a href="#">Projects</a>
                         </li>
                         <li>
-                            <a href="https://github.com/christian-dale/kernel.css/releases">Downloads</a>
+                            <a href="#">Blog</a>
                         </li>
                         <li>
-                            <a href="https://github.com/christian-dale/kernel.css/blob/master/README.md">Docs</a>
+                            <a href="#">About</a>
                         </li>
                         <li>
-                            <a href="https://github.com/christian-dale/kernel.css"><img class="github-icon" src="GitHub-Mark.png" alt="GitHub"> GitHub</a>
+                            <a href="#">Contact</a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </div>
+
+        <pre class="ke-code ke-code-block prettyprint">
+<code>&lt;header class="ke-header ke-header-sm"&gt;
+    &lt;div class="ke-container"&gt;
+        &lt;input class="ke-nav-toggle" id="ke-nav-toggle" type="checkbox"&gt;
+        &lt;label for="ke-nav-toggle" class="ke-nav-toggle-hamburger"&gt;&lt;span&gt;☰&lt;/span&gt;&lt;/label&gt;
+
+        &lt;nav class="ke-nav"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;Projects&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;Blog&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;About&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;Contact&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+&lt;/header&gt;</code></pre>
 
         <hr class="ke-hr">
         <h3>Hero</h3>
@@ -317,7 +305,7 @@
 &lt;/div&gt;</code></pre>
 
         <hr class="ke-hr">
-        <h3>Inputs</h3>
+        <h3>Buttons</h3>
 
         <div class="ke-grid">
             <div class="ke-col-1">
@@ -369,123 +357,96 @@ You may also use the "ke-button" class with anchor tags and button inputs,
 and you can extend the class if you want to customize your own buttons.
 </pre>
 
-        <textarea class="ke-input-text" name="name" placeholder="Type here..."></textarea>
-        <input class="ke-input-text" type="text" name="name" value="" placeholder="Name">
+        <hr class="ke-hr">
+        <h3>Inputs</h3>
 
-        <select class="ke-select">
+        <textarea class="ke-input" name="name" placeholder="Type here..."></textarea>
+        <input class="ke-input" type="text" name="name" value="" placeholder="Name">
+
+        <select class="ke-input">
             <option value="" disabled selected>Gender</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
             <option value="Female">Other</option>
         </select>
 
+        <pre class="ke-code ke-code-block prettyprint">
+<code>&lt;textarea class="ke-input" name="name" placeholder="Type here..."&gt;&lt;/textarea&gt;
+&lt;input class="ke-input" type="text" name="name" value="" placeholder="Name"&gt;
+
+&lt;select class="ke-input"&gt;
+    &lt;option value="" disabled selected&gt;Gender&lt;/option&gt;
+    &lt;option value="Male"&gt;Male&lt;/option&gt;
+    &lt;option value="Female"&gt;Female&lt;/option&gt;
+    &lt;option value="Female"&gt;Other&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+
         <hr class="ke-hr">
         <h3>Notices</h3>
 
         <p>Use notices to inform your users of something important. There are multiple types of notices: Default, affirmation, info, warning and alert.</p>
 
-        <div class="ke-notice ke-section"><strong>Notice: </strong> This is a default notice. <span class="ke-notice-close">×</span></div>
+        <div class="ke-notice ke-section">
+            <strong>Notice: </strong> This is a default notice.
+        </div>
 
-        <div class="ke-notice ke-safe ke-section"><strong>Notice: </strong> This is an affirmation. <span class="ke-notice-close">×</span></div>
+        <div class="ke-notice ke-safe ke-section">
+            <strong>Notice: </strong> This is an affirmation.
+        </div>
 
-        <div class="ke-notice ke-info ke-section"><strong>Notice: </strong> This is an info notice. <span class="ke-notice-close">×</span></div>
+        <div class="ke-notice ke-info ke-section">
+            <strong>Notice: </strong> This is an info notice.
+        </div>
 
-        <div class="ke-notice ke-warning ke-section"><strong>Warning: </strong> This is a warning. <span class="ke-notice-close">×</span></div>
+        <div class="ke-notice ke-warning ke-section">
+            <strong>Warning: </strong> This is a warning.
+        </div>
 
-        <div class="ke-notice ke-alert ke-section"><strong>Alert: </strong> This is an alert! <span class="ke-notice-close">×</span></div>
+        <div class="ke-notice ke-alert ke-section">
+            <strong>Alert: </strong> This is an alert!
+        </div>
 
         <pre class="ke-code ke-code-block prettyprint">
-<code>&lt;div class="ke-notice"&gt;This is a default notice. &lt;span class="ke-notice-close"&gt;×&lt;/span&gt;&lt;/div&gt;
-&lt;div class="ke-notice ke-safe"&gt;This is an affirmation. &lt;span class="ke-notice-close"&gt;×&lt;/span&gt;&lt;/div&gt;
-&lt;div class="ke-notice ke-info"&gt;This is an info notice. &lt;span class="ke-notice-close"&gt;×&lt;/span&gt;&lt;/div&gt;
-&lt;div class="ke-notice ke-warning"&gt;This is a warning. &lt;span class="ke-notice-close"&gt;×&lt;/span&gt;&lt;/div&gt;
-&lt;div class="ke-notice ke-info"&gt;This is an alert! &lt;span class="ke-notice-close"&gt;×&lt;/span&gt;&lt;/div&gt;</code></pre>
+<code>&lt;div class="ke-notice"&gt;This is a default notice.&lt;/div&gt;
+&lt;div class="ke-notice ke-safe"&gt;This is an affirmation.&lt;/div&gt;
+&lt;div class="ke-notice ke-info"&gt;This is an info notice.&lt;/div&gt;
+&lt;div class="ke-notice ke-warning"&gt;This is a warning.&lt;/div&gt;
+&lt;div class="ke-notice ke-alert"&gt;This is an alert!&lt;/div&gt;</code></pre>
+
+        <p><b>Adding a close button to the notice</b></p>
+        <p>kernel.css is a CSS-only library, but for your convenience, here's how you can add a simple close button using JavaScript.</p>
+
+        <div class="ke-notice ke-section">
+            <span class="ke-notice-close" onclick="this.parentElement.remove();">&times;</span>
+            <strong>Notice: </strong> This is a default notice.
+        </div>
+
+        <pre class="ke-code ke-code-block prettyprint">
+<code>&lt;div class="ke-notice"&gt;
+    &lt;span class="ke-notice-close" onclick="this.parentElement.remove();"&gt;&times;&lt;/span&gt;
+    &lt;strong&gt;Notice: &lt;/strong&gt; This is a default notice.
+&lt;/div&gt;</code></pre>
 
         <hr class="ke-hr">
         <h3>Colors</h3>
+        <p>kernel.css includes predefined color classes. These are great for prototyping your ideas quickly, but you may not want to pollute your HTML with a bunch of color classes.</p>
 
         <div class="ke-grid">
-            <div class="ke-col-1 color ke-bg-red"></div>
-            <div class="ke-col-1 color ke-bg-pink"></div>
-            <div class="ke-col-1 color ke-bg-purple"></div>
-            <div class="ke-col-1 color ke-bg-deep-purple"></div>
-            <div class="ke-col-1 color ke-bg-indigo"></div>
-            <div class="ke-col-1 color ke-bg-blue"></div>
-            <div class="ke-col-1 color ke-bg-light-blue"></div>
-            <div class="ke-col-1 color ke-bg-cyan"></div>
-            <div class="ke-col-1 color ke-bg-teal"></div>
-            <div class="ke-col-1 color ke-bg-green"></div>
-        </div>
-
-        <div class="ke-grid">
-            <div class="ke-col-1 color ke-bg-light-green"></div>
-            <div class="ke-col-1 color ke-bg-lime"></div>
-            <div class="ke-col-1 color ke-bg-yellow"></div>
-            <div class="ke-col-1 color ke-bg-amber"></div>
-            <div class="ke-col-1 color ke-bg-orange"></div>
-            <div class="ke-col-1 color ke-bg-deep-orange"></div>
+            <div class="ke-col-2 color ke-bg-default"></div>
+            <div class="ke-col-2 color ke-bg-dark"></div>
+            <div class="ke-col-2 color ke-bg-info"></div>
+            <div class="ke-col-2 color ke-bg-safe"></div>
+            <div class="ke-col-2 color ke-bg-warning"></div>
+            <div class="ke-col-2 color ke-bg-alert"></div>
         </div>
 
         <pre class="ke-code ke-code-block prettyprint">
-<code>&lt;div class="ke-bg-{color}"&gt;&lt;/div&gt;</code></pre>
-
-        <p>Kernel.css includes predefined color classes. These are great for prototyping your ideas quickly, but you may not want to pollute your HTML with a bunch of color classes.</p>
-
-        <hr class="ke-hr">
-        <h3>Tabs</h3>
-
-        <div class="ke-tabs">
-            <ul>
-                <li><a>Tab #1</a></li>
-                <li><a>Tab #2</a></li>
-                <li><a>Tab #3</a></li>
-            </ul>
-
-            <div class="ke-tab">
-                <p>Tab #1</p>
-            </div>
-
-            <div class="ke-tab">
-                <p>Tab #2</p>
-            </div>
-
-            <div class="ke-tab">
-                <p>Tab #3</p>
-            </div>
-        </div>
-
-        <pre class="ke-code ke-code-block prettyprint">
-<code>&lt;div class="ke-tabs"&gt;
-    &lt;ul&gt;
-        &lt;li&gt;&lt;a&gt;Test&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a&gt;Test #2&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;div class="ke-tab"&gt;
-        &lt;p>test #1/p&gt;
-    &lt;/div&gt;
-
-    &lt;div class="ke-tab"&gt;
-        &lt;p&gt;test #2&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-            <!-- <hr class="hr">
-            <h3>Slideshow</h3>
-
-            <div class="slideshow" data-nav="false" data-auto="false">
-                <div class="slide">
-                    <img src="https://source.unsplash.com/eaxgNP4cpY8" alt="" draggable="false">
-                </div>
-
-                <div class="slide">
-                    <img src="https://source.unsplash.com/-OyWCXEczxI" alt="" draggable="false">
-                </div>
-
-                <div class="slide">
-                    <img src="https://source.unsplash.com/Nk5KAUgTpj4" alt="" draggable="false">
-                </div>
-            </div> -->
+<code>&lt;div class="ke-bg-default"&gt;&lt;/div&gt;
+&lt;div class="ke-bg-dark"&gt;&lt;/div&gt;
+&lt;div class="ke-bg-info"&gt;&lt;/div&gt;
+&lt;div class="ke-bg-safe"&gt;&lt;/div&gt;
+&lt;div class="ke-bg-warning"&gt;&lt;/div&gt;
+&lt;div class="ke-bg-alert"&gt;&lt;/div&gt;</code></pre>
 
             <hr class="ke-hr">
             <h3>Labels</h3>
@@ -585,11 +546,11 @@ and you can extend the class if you want to customize your own buttons.
         <hr class="ke-hr">
         <h3>Cards</h3>
 
-        <p>Card are a popular way to section content, and creates a contrast from the background page.</p>
+        <p>Card are a popular way to section content, and creates a contrast well with the rest of the content.</p>
 
         <div class="ke-grid">
             <div class="ke-col-6">
-                <div class="ke-card ke-card-sm">
+                <div class="ke-card">
                     <div class="ke-card-header">
                         <h2>Desert</h2>
                         <img src="desert.jpg" alt="Desert">
@@ -603,17 +564,17 @@ and you can extend the class if you want to customize your own buttons.
             </div>
 
             <div class="ke-col-6">
-                <div class="ke-card ke-card-lg">
+                <div class="ke-card">
                     <div class="ke-card-header">
                         <h2>Deer</h2>
                         <img src="deer.jpg" alt="Deer">
                     </div>
 
                     <div class="ke-card-content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        <hr>
-                        <h3>Comments:</h3> Great post, keep it up!
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                        <a href="#" class="ke-button ke-btn-primary" style="width: 100%;">Button</a>
                     </div>
                 </div>
             </div>
@@ -622,8 +583,8 @@ and you can extend the class if you want to customize your own buttons.
         <pre class="ke-code ke-code-block prettyprint">
 <code>&lt;div class="ke-card ke-card-sm"&gt;</code>
     &lt;div class="ke-card-header"&gt;
-        &lt;h3>Deer&lt;/h3&gt;
-        &lt;img src="https://source.unsplash.com/nuRYwOJryyk/800x600" alt="Deer"&gt;
+        &lt;h3>Desert&lt;/h3&gt;
+        &lt;img src="..." alt="Image of desert landscape"&gt;
     &lt;/div&gt;
 
     &lt;div class="ke-card-content"&gt;
@@ -632,9 +593,61 @@ and you can extend the class if you want to customize your own buttons.
 &lt;/div&gt;</pre>
 
         <hr class="ke-hr">
+        <h3>Accordion</h3>
+
+        <div class="ke-accordion">
+            <details>
+                <summary>Accordion Item #1</summary>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </details>
+
+            <details>
+                <summary>Accordion Item #2</summary>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </details>
+
+            <details>
+                <summary>Accordion Item #3</summary>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </details>
+        </div>
+
+        <pre class="ke-code ke-code-block prettyprint">
+<code>&lt;div class="ke-accordion"&gt;
+    &lt;details&gt;
+        &lt;summary&gt;Accordion Item #1&lt;/summary&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+    &lt;/details&gt;
+
+    &lt;details&gt;
+        &lt;summary&gt;Accordion Item #2&lt;/summary&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+    &lt;/details&gt;
+
+    &lt;details&gt;
+        &lt;summary&gt;Accordion Item #3&lt;/summary&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+    &lt;/details&gt;
+&lt;/div&gt;</code></pre>
+
+        <hr class="ke-hr">
+        <h3>Progressbar</h3>
+        
+        <p>The progress of the progressbar is controlled by setting the "width" style attribute.</p>
+
+        <div class="ke-progressbar">
+            <div class="ke-progress" style="width: 25%;"></div>
+        </div>
+
+        <pre class="ke-code ke-code-block prettyprint">
+<code>&lt;div class="ke-progressbar"&gt;
+    &lt;div class="ke-progress" style="width: 25%"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <hr class="ke-hr">
         <h3>Code</h3>
 
-        <p>The code class is used for displaying code. The first way to do this is inline code <code class="ke-code">like this</code>, and code blocks: </p>
+        <p>The code class is used for displaying code. The first way to do this is inline code (<code class="ke-code">like this</code>), and code blocks: </p>
 
         <pre class="ke-code ke-code-block prettyprint">
 <code>Inline code
@@ -644,19 +657,7 @@ and you can extend the class if you want to customize your own buttons.
 Code block
 <code>&lt;pre class="ke-code ke-code-block"&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;</code></pre>
 
-        <hr class="ke-hr">
-        <h3>Progressbar</h3>
-
-        <div class="ke-progressbar" id="progress-ex1">
-            <div class="ke-progress progress"></div>
-        </div>
-
-        <button class="ke-button ke-btn-default ke-section" id="btn-activate-progress" type="button" name="button">Activate Progressbar</button>
-
-        <pre class="ke-code ke-code-block prettyprint">
-<code>&lt;div class="ke-progressbar"&gt;
-    &lt;div class="ke-progress" style="width: 75%"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+        <p><b>Note: </b><i>Code highlighting is not part of kernel.css.</i></p>
 
         <hr class="ke-hr">
         <h3>Utils</h3>
@@ -716,68 +717,22 @@ Make an element circular.
         </div>
     </main>
 
-    <footer class="ke-footer">
-        <div class="ke-footer-header">
-            &copy; Christian Dale <span class="copyright-date"></span>
-        </div>
-
-        <br>
-
-        <p>Created by <a href="https://christiandale.no" class="ke-anchor">Christian Dale</a></p>
-
-        <div class="ke-container">
-            <nav class="ke-nav">
-                <ul>
-                    <li>
-                        <a href="/kernel.css">Home</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/christian-dale/kernel.css/releases">Downloads</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/christian-dale/kernel.css/blob/master/README.md">Docs</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/christian-dale/kernel.css">Github</a>
-                    </li>
-                </ul>
-            </nav>
+    <footer>
+        <div class="ke-bg-default ke-content-lg">
+            <div class="ke-container">
+                <p>Copyright &copy; <span class="copyright-date"></span> <a href="https://christiandale.no" class="ke-anchor">Christian Dale</a>. All rights reserved.</p>
+                <p>Licensed under the <a href="https://github.com/christian-dale/kernel.css/blob/master/LICENSE.txt">MIT</a> License.</p>
+            </div>
         </div>
     </footer>
 
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script type="text/javascript">
-        'use strict';
-
-        document.querySelector('.copyright-date').innerHTML = new Date().getFullYear();
-
         /**
-         * Progressbar code
+         * Set the copyright date.
          **/
 
-        const btnProgress = document.querySelector('#btn-activate-progress');
-        const progress1 = document.querySelector('#progress-ex1 .progress');
-
-        let triggered = false;
-        let count = 0;
-
-        function progressLoop() {
-            progress1.style.width = count + '%';
-
-            if (count <= 100) {
-                count += 0.5;
-            }
-
-            requestAnimationFrame(progressLoop);
-        }
-
-        btnProgress.onclick = () => {
-            if (!triggered) {
-                progressLoop();
-            }
-
-            triggered = true;
-        };
+         document.querySelector('.copyright-date').innerHTML = new Date().getFullYear();
 
         /**
          * Change header on scroll.
@@ -790,15 +745,6 @@ Make an element circular.
                 document.querySelector('header').classList.remove('header-hover');
             }
         };
-
-        /**
-         * Visual queue showing where on the page you reside.
-         **/
-
-         // window.onscroll = function() {
-         //     var x = (document.scrollingElement.scrollTop / document.documentElement.scrollHeight) * 100;
-         //     document.querySelector('.scroll-indicator').style.width = x + '%';
-         // };
     </script>
 </body>
 
