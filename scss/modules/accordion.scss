@@ -17,4 +17,8 @@
     details:not(:last-of-type) {
         border-bottom: 1px solid #eee;
     }
+
+    summary {
+        cursor: pointer;
+    }
 }
