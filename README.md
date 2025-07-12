@@ -47,29 +47,21 @@ Navigation code example
 -----------
 ```html
 <body class="ke-base">
-	<header class="ke-header ke-header-sm">
-		<div class="ke-container">
-			<input class="ke-nav-toggle" id="ke-nav-toggle" type="checkbox">
-			<label for="ke-nav-toggle" class="ke-nav-toggle-hamburger"><span>☰</span></label>
+  <header class="ke-header ke-header-sm">
+    <div class="ke-container">
+	  <input class="ke-nav-toggle" id="ke-nav-toggle" type="checkbox">
+	  <label for="ke-nav-toggle" class="ke-nav-toggle-hamburger"><span>☰</span></label>
 
-			<nav class="ke-nav">
-				<ul>
-					<li>
-						<a href="#">Projects</a>
-					</li>
-					<li>
-						<a href="#">Blog</a>
-					</li>
-					<li>
-						<a href="#">About</a>
-					</li>
-					<li>
-						<a href="#">Contact</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</header>
+	  <nav class="ke-nav">
+	    <ul>
+	      <li><a href="#">Projects</a></li>
+		  <li><a href="#">Blog</a></li>
+		  <li><a href="#">About</a></li>
+		  <li><a href="#">Contact</a></li>
+		</ul>
+	  </nav>
+    </div>
+  </header>
 </body>
 ```
 

@@ -2,8 +2,9 @@
 /*!
     kernel.css v1.0.0
     MIT License
-    github.com/ionogy/kernel.css
+    github.com/christian-dale/kernel.css
 */
+/** Easing functions from http://easings.net */
 /* Base uses */
 /*
   Function for returning color.
@@ -730,12 +731,16 @@ a.ke-button {
 .ke-accordion details:not(:last-of-type) {
   border-bottom: 1px solid #eee;
 }
+.ke-accordion summary {
+  cursor: pointer;
+}
 
 /*!
     kernel.css v1.0.0
     MIT License
-    github.com/ionogy/kernel.css
+    github.com/christian-dale/kernel.css
 */
+/** Easing functions from http://easings.net */
 /* Base uses */
 a.ke-label {
   border: 1px solid #bdbdbd;
