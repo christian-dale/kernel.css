@@ -40,7 +40,7 @@ Installation
 ============
 Simple. Just include this tag in your html.
 ```html
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/christian-dale/kernel.css@2.0.0/build/kernel.min.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/christian-dale/kernel.css@2.0.0-beta.1/build/kernel.min.css" />
 ```
 
 Navigation code example
