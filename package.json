@@ -26,7 +26,7 @@
         "url": "https://github.com/christian-dale/kernel.css/issues"
     },
     "homepage": "https://github.com/christian-dale/kernel.css#readme",
-    "dependencies": {
+    "devDependencies": {
         "minify": "^14.0.0",
         "postcss": "^8.5.6",
         "postcss-cli": "^11.0.1",
