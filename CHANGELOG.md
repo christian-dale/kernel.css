@@ -1,13 +1,5 @@
 # Changelog
 
-## Todo
-- Add accordion module. (todo)
-- Add support for modals. (todo)
-- Add animation classes and API's. (todo)
-- Add methods for interfacing with jQuery. (todo)
-- Add a slideshow module. (todo)
-- Make .ke- prefix optional. (todo)
-
 ## 2.0.0 (28-01-2023)
 - Remove opinionated styles.
 

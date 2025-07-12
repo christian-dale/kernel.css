@@ -1,6 +1,6 @@
 [![npm version](https://badge.fury.io/js/kernel.css.svg)](https://www.npmjs.com/package/kernel.css)
 
-Welcome to the kernel.css framework!
+Welcome to the kernel.css library!
 
 Table of contents
 -----------------
@@ -15,7 +15,7 @@ Introduction
 
 What is it?
 -----------
-The kernel.css framework is a unintrusive, lightweight and semantic CSS library. It uses prefixes for all it's classes and is meant to be
+The kernel.css library is a unintrusive, lightweight and semantic CSS library. It uses prefixes for all it's classes and is meant to be
 a simple foundation to your project.
 
 Features

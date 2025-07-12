@@ -1,7 +1,7 @@
 {
     "name": "kernel.css",
     "version": "1.0.0",
-    "description": "The CSS framework built for any kind of task",
+    "description": "The CSS library built for any kind of task",
     "stylintrc": ".stylintrc",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,7 +17,7 @@
     },
     "keywords": [
         "CSS",
-        "framework",
+        "library",
         "simple"
     ],
     "author": "Jim Christian",
