@@ -40,36 +40,36 @@ Installation
 ============
 Simple. Just include this tag in your html.
 ```html
-<link rel="stylesheet" type="text/css" href="kernel.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/christian-dale/kernel.css@2.0.0/build/kernel.min.css" />
 ```
 
 Navigation code example
 -----------
 ```html
 <body class="ke-base">
-  <header class="ke-header ke-header-sm">
-    <div class="ke-header-brand">kernel.css</div>
+	<header class="ke-header ke-header-sm">
+		<div class="ke-container">
+			<input class="ke-nav-toggle" id="ke-nav-toggle" type="checkbox">
+			<label for="ke-nav-toggle" class="ke-nav-toggle-hamburger"><span>☰</span></label>
 
-    <button class="nav-toggle">
-        <i class="material-icons">menu</i>
-    </button>
-
-    <div class="ke-container">
-      <nav class="ke-nav">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Download</a></li>
-          <li><a href="#">Wiki</a></li>
-          <li><a href="#">About us</a></li>
-        </ul>
-      </nav>
-      <nav class="ke-nav ke-float-right">
-        <ul>
-          <li><a href="#">Blog</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+			<nav class="ke-nav">
+				<ul>
+					<li>
+						<a href="#">Projects</a>
+					</li>
+					<li>
+						<a href="#">Blog</a>
+					</li>
+					<li>
+						<a href="#">About</a>
+					</li>
+					<li>
+						<a href="#">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 </body>
 ```
 
