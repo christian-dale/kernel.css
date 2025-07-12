@@ -92,3 +92,13 @@
         width: 100% !important;
     }
 }
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

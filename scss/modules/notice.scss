@@ -1,5 +1,6 @@
 @use "sass:map";
 @use "../theme";
+@use "../base/util";
 
 .notice {
     animation: fadein 0.5s;
@@ -34,14 +35,5 @@
     .notice-close {
         cursor: pointer;
         float: right;
-    }
-}
-
-@keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
     }
 }
