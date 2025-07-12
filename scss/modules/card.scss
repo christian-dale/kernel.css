@@ -3,7 +3,7 @@
 
 .card {
 	background-color: map.get(theme.$card, "bg");
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+	border: 1px solid #eee;
 	border-radius: 5px;
 	margin: 15px 0;
 
