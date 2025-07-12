@@ -580,7 +580,7 @@ a.ke-button {
 
 .ke-card {
   background-color: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  border: 1px solid #eee;
   border-radius: 5px;
   margin: 15px 0;
 }
@@ -588,7 +588,6 @@ a.ke-button {
   height: 150px;
   position: relative;
   text-align: center;
-  bottom: 15px;
 }
 .ke-card .ke-card-header .ke-header-title {
   color: white;
