@@ -4,7 +4,6 @@
     MIT License
     github.com/christian-dale/kernel.css
 */
-/** Easing functions from http://easings.net */
 /* Base uses */
 /*
   Function for returning color.
@@ -131,6 +130,14 @@
 @media (max-width: 800px) {
   .ke-halfwidth {
     width: 100% !important;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 .ke-base {
@@ -295,6 +302,7 @@
 /* Generic uses */
 .ke-button, button, input[type=submit] {
   background-color: #fafafa;
+  transition: all 200ms ease-out;
   border: 0;
   box-sizing: border-box;
   cursor: pointer;
@@ -304,7 +312,6 @@
   outline: 0;
   padding: 0 15px;
   text-decoration: none;
-  transition: all 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .ke-button.ke-btn-default, button.ke-btn-default, input[type=submit].ke-btn-default {
   background-color: #f5f5f5;
@@ -398,6 +405,7 @@ a.ke-button {
 
 .ke-input {
   background: #fff;
+  transition: border 200ms ease-out;
   color: #757575;
   border: 1px solid #eee;
   border-radius: 3px;
@@ -407,8 +415,7 @@ a.ke-button {
   width: 100%;
   padding: 8px;
   box-sizing: border-box;
-  transition: border 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  -webkit-appearance: none;
+  appearance: none;
 }
 .ke-input:focus {
   border: 1px solid #018fe8;
@@ -671,14 +678,6 @@ a.ke-button {
   float: right;
 }
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .ke-code {
   background-color: #fafafa;
   border-radius: 5px;
@@ -740,7 +739,6 @@ a.ke-button {
     MIT License
     github.com/christian-dale/kernel.css
 */
-/** Easing functions from http://easings.net */
 /* Base uses */
 a.ke-label {
   border: 1px solid #bdbdbd;
