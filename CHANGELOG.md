@@ -1,7 +1,22 @@
 # Changelog
 
-## 2.0.0 (28-01-2023)
-- Remove opinionated styles.
+## 2.0.0-beta.1 (12-07-2025)
+✨ Added
+-	Added accordion module.
+
+🧹 Changed
+- Replaced Stylus with SCSS.
+- Refactored the grid system to use CSS Grid.
+- Reworked color, transition and animation systems.
+- Fixed various bugs.
+
+🧽 Removed
+-	Removed Material Icons support and related variables.
+-	Removed bold text from label module.
+-	Removed background from blockquote.
+-	Removed old test files.
+- Removed sidebar and tabs modules (these did not fit with the CSS only approach).
+- JavaScript dependencies are no longer included in the library.
 
 ## 1.0.0 (01-05-2022)
 - Make .ion- prefix .ke- prefix.
@@ -50,7 +65,7 @@
 - Change to the MIT license.
 
 ## 0.3.0 (11-01-2017)
-- Changed typography ([Awesome Typography](https://vaporwave98.github.io/awesome-typography)).
+- Changed typography ([Awesome Typography](https://christian-dale.github.io/awesome-typography)).
 - Switched to a 16 column grid.
 - Redo table styles.
 - Add headings and paragraph support in hero (ion-hero-header and ion-hero-paragraph are
