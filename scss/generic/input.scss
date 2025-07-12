@@ -3,6 +3,7 @@
 
 .input {
 	background: map.get(theme.$input, "bg");
+	transition: border 200ms ease-out;
 	color: #757575;
 	border: 1px solid #eee;
 	border-radius: 3px;
@@ -12,8 +13,7 @@
 	width: 100%;
 	padding: 8px;
 	box-sizing: border-box;
-	transition: border 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
-	-webkit-appearance: none;
+	appearance: none;
 
 	&:focus {
 		border: 1px solid map.get(theme.$colors, "link");
