@@ -47,9 +47,9 @@
     }
 }
 
-.rtl {
-    direction: rtl;
-    unicode-bidi: embed;
+    hr {
+        @extend .hr;
+    }
 }
 
 .modern {
@@ -95,5 +95,9 @@
 
     a {
         @extend .anchor;
+    }
+
+    hr {
+        @extend .hr;
     }
 }
