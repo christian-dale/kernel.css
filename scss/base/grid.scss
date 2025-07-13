@@ -2,11 +2,10 @@
 @use "../theme";
 @use "util";
 
-.grid {
-	@extend .section;
+@mixin grid-base {
 	display: grid;
-	grid-gap: calc(theme.$main-padding * 2);
 	grid-template-columns: repeat(12, 1fr);
+	gap: calc(theme.$main-padding * 2);
 
 	@for $i from 1 through 12 {
 		.col-#{$i} {
@@ -15,42 +14,25 @@
 	}
 }
 
-.container {
-	box-sizing: border-box;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: map.get(theme.$container, "width");
-	padding-left: theme.$main-padding;
-	padding-right: theme.$main-padding;
-}
+.grid {
+	@include grid-base;
 
-.visible-sm {
-	display: none;
-}
-
-.visible-lg {
-	display: block;
-}
-
-/* For small screen sizes */
-@media (max-width: map.get(theme.$container, "width-sm")) {
-	.grid {
-		grid-template-columns: 1fr;
-	}
-
-	.container {
-		width: 100%;
-	}
-
-	[class*='col-'] {
-		margin-right: 0;
-	}
-
-	.visible-sm {
+	@media (width < map.get(theme.$container, "width-sm")) {
 		display: block;
 	}
+}
 
-	.visible-lg {
-		display: none;
+.grid-sm {
+	@include grid-base;
+}
+
+.container {
+	box-sizing: border-box;
+	max-width: map.get(theme.$container, "width");
+	margin: 0 auto;
+	padding: 0 theme.$main-padding;
+
+	@media (width < map.get(theme.$container, "width-sm")) {
+		width: 100%;
 	}
 }

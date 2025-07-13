@@ -66,39 +66,30 @@
     bottom: 0;
 }
 
-.ul, .ol {
-    line-height: 1.8;
-}
-
 .autowrap {
     overflow-wrap: break-word;
 }
 
-.block {
-    display: block;
+.rtl {
+    direction: rtl;
+    unicode-bidi: embed;
 }
 
-.fullwidth {
-    width: 100% !important;
+.visible-sm {
+	display: none;
 }
 
-.halfwidth {
-    width: 50% !important;
+.visible-lg {
+	display: block;
 }
 
 /* For small screen sizes */
 @media (max-width: map.get(theme.$container, "width-sm")) {
-    .halfwidth {
-        width: 100% !important;
-    }
-}
+	.visible-sm {
+		display: block;
+	}
 
-@keyframes fadein {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+	.visible-lg {
+		display: none;
+	}
 }
