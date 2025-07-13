@@ -33,6 +33,7 @@
         border: 1px solid #eee;
         display: none;
         position: absolute;
+        z-index: 999;
 
         ul li {
             display: block;
