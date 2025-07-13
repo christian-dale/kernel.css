@@ -40,7 +40,7 @@
     </header>
 
     <div class="hero ke-hero">
-        <div class="ke-container ke-vertical-center">
+        <div class="ke-container">
             <h3>kernel.css</h3>
             <p>Simplicity done right</p>
             <a class="ke-button ke-btn-outline ke-btn-lg" draggable="false" href="https://github.com/christian-dale/kernel.css/releases"><i class="fa-solid fa-circle-down" style="margin-right: 5px;"></i> Download</a>
@@ -48,7 +48,7 @@
     </div>
 
     <main class="ke-container">
-        <div class="ke-grid">
+        <div class="ke-grid ke-section">
             <div class="ke-col-4 feature">
                 <h3 class="block-spacing">Built for any kind of job</h3>
                 <p>Whether you're making a website, web app or a dashboard app, this CSS library got you covered!</p>
@@ -97,7 +97,7 @@
         <hr class="ke-hr">
         <h3>Base</h3>
 
-        <p>The <code class="ke-code">ke-base</code> class contains the styles for typography, links, headings and paragraphs. Note: You are free to wrap this class for any section you wish.</p>
+        <p>The <code class="ke-code">ke-base</code> class contains the styles for typography, links, hr, headings and paragraphs. Note: You are free to wrap this class for any section you wish.</p>
 
         <div class="ke-grid">
             <div class="ke-col-6">
@@ -124,23 +124,44 @@
 
         <p>As long as <code class="ke-code">ke-base</code> is being used, these styles will be applied automatically.</p>
 
-        <h1>Heading 1 <div class="heading-font-label"><code>2.6179em / 41px</code></div></h1>
-        <h2>Heading 2 <div class="heading-font-label"><code>2.0681em / 33px</code></div></h2>
-        <h3>Heading 3 <div class="heading-font-label"><code>1.618em / 25px</code></div></h3>
-        <h4>Heading 4 <div class="heading-font-label"><code>1.272em / 20px</code></div></h4>
-        <h5>Heading 5 <div class="heading-font-label"><code>1em / 16px</code></div></h5>
-        <h6>Heading 6 <div class="heading-font-label"><code>0.7862em / 12px</code></div></h6>
+        <h1>Heading 1 <div class="heading-font-label"><code>2.6179rem</code></div></h1>
+        <h2>Heading 2 <div class="heading-font-label"><code>2.0681rem</code></div></h2>
+        <h3>Heading 3 <div class="heading-font-label"><code>1.618rem</code></div></h3>
+        <h4>Heading 4 <div class="heading-font-label"><code>1.272rem</code></div></h4>
+        <h5>Heading 5 <div class="heading-font-label"><code>1rem</code></div></h5>
+        <h6>Heading 6 <div class="heading-font-label"><code>0.7862rem</code></div></h6>
 
         <p style="display: inline;">Paragraph
-            <div class="heading-font-label"><code>1.0rem / 16px</code></div>
+            <div class="heading-font-label"><code>1.0rem</code></div>
         </p>
+
+        <hr class="ke-hr">
+        <h3>Lists</h3>
+        <p>The list styles can be activated using the <code class="ke-code">ke-list</code> class.</p>
+
+        <div class="ke-grid">
+            <div class="ke-col-6">
+                <ul class="ke-list">
+                    <li>Unordered list item 1</li>
+                    <li>Unordered list item 2</li>
+                    <li>Unordered list item 3</li>
+                </ul>
+            </div>
+            <div class="ke-col-6">
+                <ol class="ke-list">
+                    <li>Ordered list item 1</li>
+                    <li>Ordered list item 2</li>
+                    <li>Ordered list item 3</li>
+                </ol>
+            </div>
+        </div>
 
         <hr class="ke-hr">
         <h3>Grid</h3>
 
         <p>kernel.css comes with a 12 column grid system.</p>
 
-        <div class="ke-grid grid-example">
+        <div class="ke-grid-sm  grid-example">
             <div class="ke-col-10 grid-example-item">
                 <p>col-10</p>
             </div>
@@ -149,7 +170,7 @@
             </div>
         </div>
 
-        <div class="ke-grid grid-example">
+        <div class="ke-grid-sm  grid-example">
             <div class="ke-col-8 grid-example-item">
                 <p>col-8</p>
             </div>
@@ -158,7 +179,7 @@
             </div>
         </div>
 
-        <div class="ke-grid grid-example">
+        <div class="ke-grid-sm  grid-example">
             <div class="ke-col-6 grid-example-item">
                 <p>col-6</p>
             </div>
@@ -167,7 +188,7 @@
             </div>
         </div>
 
-        <div class="ke-grid grid-example">
+        <div class="ke-grid-sm  grid-example">
             <div class="ke-col-4 grid-example-item">
                 <p>col-4</p>
             </div>
@@ -176,7 +197,7 @@
             </div>
         </div>
 
-        <div class="ke-grid grid-example">
+        <div class="ke-grid-sm  grid-example">
             <div class="ke-col-2 grid-example-item">
                 <p>col-2</p>
             </div>
@@ -185,8 +206,11 @@
             </div>
         </div>
 
-        <pre class="ke-code ke-code-block prettyprint">
-<code>&lt;div class="ke-grid"&gt;
+        <div class="ke-grid">
+            <div class="ke-col-6">
+<pre class="ke-code ke-code-block prettyprint">
+<code>&lt;!-- Wraps on small screens --&gt;
+&lt;div class="ke-grid"&gt;
     &lt;div class="ke-col-8"&gt;
         ...
     &lt;/div&gt;
@@ -194,6 +218,43 @@
        ...
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+            </div>
+            <div class="ke-col-6">
+<pre class="ke-code ke-code-block prettyprint">
+<code>&lt;!-- Doesn't wrap on small screens --&gt;
+&lt;div class="ke-grid-sm"&gt;
+    &lt;div class="ke-col-8"&gt;
+        ...
+    &lt;/div&gt;
+    &lt;div class="ke-col-4"&gt;
+       ...
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+
+        <hr class="ke-hr">
+        <h3>Sections and content</h3>
+
+        <p>Sections and content classes are used to add spacing to your elements. The section class adds a set margin, while the content class adds a set padding.</p>
+
+<pre class="ke-code ke-code-block prettyprint">
+<code>&lt;!-- Section --&gt;
+Gives a set margin to an element. Used to seperate content.
+&lt;div class="ke-section"&gt;&lt;/div&gt;
+
+&lt;!-- Section lg --&gt;
+Gives a greater margin to an element. Used to seperate content.
+&lt;div class="ke-section-lg"&gt;&lt;/div&gt;
+
+&lt;!-- Content --&gt;
+Gives a set padding to an element.
+&lt;div class="ke-content"&gt;&lt;/div&gt;
+
+&lt;!-- Content lg --&gt;
+Gives a greater padding to an element.
+&lt;div class="ke-content-lg"&gt;&lt;/div&gt;
+</code></pre>
 
         <hr class="ke-hr">
         <h3>Nav</h3>
@@ -302,47 +363,25 @@
 
         <div class="ke-hero">
             <h4>Welcome</h4>
+            <p>Lorem ipsum dolor sit amet, secerno secrevi secretum nutus.</p>
         </div>
 
         <pre class="ke-code ke-code-block prettyprint">
 <code>&lt;div class="ke-hero"&gt;
     &lt;h3&gt;Welcome&lt/h3&gt;
-&lt;/div&gt;</code></pre>
-
-<p>You may use the "ke-vertical-center" class to vertically center full height hero's.</p>
-<pre class="ke-code ke-code-block prettyprint">
-<code>&lt;div class="ke-hero" style="height: 100vh;"&gt;
-    &lt;div class="ke-container ke-vertical-center"&gt;
-        &lt;h3&gt;Welcome&lt/h3&gt;
-    &lt;/div&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, secerno secrevi secretum nutus.&lt;/p&gt;
 &lt;/div&gt;</code></pre>
 
         <hr class="ke-hr">
         <h3>Buttons</h3>
 
-        <div class="ke-grid">
-            <div class="ke-col-1">
-                <button class="ke-button ke-btn-default ke-section">Default</button>
-            </div>
-            <div class="ke-col-1">
-                <button class="ke-button ke-btn-primary ke-section">Primary</button>
-            </div>
-            <div class="ke-col-1">
-                <button class="ke-button ke-btn-safe ke-section">Safe</button>
-            </div>
-            <div class="ke-col-1">
-                <button class="ke-button ke-btn-warning ke-section">Warning</button>
-            </div>
-            <div class="ke-col-1">
-                <button class="ke-button ke-btn-risk ke-section">Risk</button>
-            </div>
-            <div class="ke-col-1">
-                <button class="ke-button ke-btn-outline ke-section">Outline</button>
-            </div>
-            <div class="ke-col-1">
-                <button class="ke-button ke-btn-minimal ke-section">Minimal</button>
-            </div>
-        </div>
+        <button class="ke-button ke-btn-default ke-section">Default</button>
+        <button class="ke-button ke-btn-primary ke-section">Primary</button>        
+        <button class="ke-button ke-btn-safe ke-section">Safe</button>
+        <button class="ke-button ke-btn-warning ke-section">Warning</button>
+        <button class="ke-button ke-btn-risk ke-section">Risk</button>
+        <button class="ke-button ke-btn-outline ke-section">Outline</button>
+        <button class="ke-button ke-btn-minimal ke-section">Minimal</button>
 
         <pre class="ke-code ke-code-block prettyprint">
 <code>&lt;!-- Default Button --&gt;
@@ -464,11 +503,11 @@ and you can extend the class if you want to customize your own buttons.
             <hr class="ke-hr">
             <h3>Labels</h3>
 
-            <a href="#" class="ke-label">Label Default</a>
-            <a href="#" class="ke-label ke-safe">Label Safe</a>
-            <a href="#" class="ke-label ke-info">Label Info</a>
-            <a href="#" class="ke-label ke-warning">Label Warning</a>
-            <a href="#" class="ke-label ke-alert">Label Error</a>
+            <a href="#" class="ke-label ke-section">Label Default</a>
+            <a href="#" class="ke-label ke-safe ke-section">Label Safe</a>
+            <a href="#" class="ke-label ke-info ke-section">Label Info</a>
+            <a href="#" class="ke-label ke-warning ke-section">Label Warning</a>
+            <a href="#" class="ke-label ke-alert ke-section">Label Error</a>
 
             <pre class="ke-code ke-code-block prettyprint">
 <code>&lt;a class="ke-label" href="#"&gt;Label&lt;a&gt;
@@ -491,7 +530,7 @@ and you can extend the class if you want to customize your own buttons.
         <h3>Blockquote</h3>
 
         <blockquote class="ke-blockquote">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </blockquote>
 
         <pre class="ke-code ke-code-block prettyprint">
@@ -646,7 +685,7 @@ and you can extend the class if you want to customize your own buttons.
         <hr class="ke-hr">
         <h3>Progressbar</h3>
         
-        <p>The progress of the progressbar is controlled by setting the "width" style attribute.</p>
+        <p>The progress of the progressbar is controlled by setting the "width" style attribute (this is usually controlled through JavaScript).</p>
 
         <div class="ke-progressbar">
             <div class="ke-progress" style="width: 25%;"></div>
@@ -683,17 +722,9 @@ Code block
 &lt;!-- Horizontal Rule (hr) --&gt;
 &lt;hr class="ke-hr"&gt;
 
-&lt;!-- Section --&gt;
-Gives a set margin to an element. Used to seperate content.
-&lt;div class="ke-section"&gt;&lt;/div&gt;
-
-&lt;!-- No-shadow --&gt;
-Removes all shadows from an element.
-&lt;div class="ke-noshadow"&gt;&lt;/div&gt;
-
-&lt;!-- Vertical-center --&gt;
-Vertically center an element.
-&lt;div class="ke-vertical-center"&gt;...&lt;/div&gt;
+&lt;!-- Shadow --&gt;
+Adds shadow to an element.
+&lt;div class="ke-shadow"&gt;&lt;/div&gt;
 
 &lt;!-- Center (horizontal) --&gt;
 Center an element horizontally.
@@ -703,9 +734,6 @@ Center an element horizontally.
 Make an element circular.
 &lt;div class="ke-circle"&gt;&lt;/div&gt;
 
-&lt;!-- Horizontal Rule (hr) -->
-&lt;hr class="ke-hr"&gt;
-
 &lt;!-- Display only on small screen sizes -->
 &lt;div class="ke-visible-sm"&gt;...&lt;/div&gt;
 
@@ -713,7 +741,18 @@ Make an element circular.
 &lt;div class="ke-visible-lg"&gt;...&lt;/div&gt;
 
 &lt;!-- Autowrap a piece of text --&gt;
-&lt;p class="ke-autowrap"&gt;...&lt;/p&gt;</code></pre>
+&lt;p class="ke-autowrap"&gt;...&lt;/p&gt;
+
+&lt;!-- Right to left text direction --&gt;
+&lt;p class="ke-rtl"&gt;...&lt;/p&gt;
+
+&lt;!-- Set position fixed (top) --&gt;
+Fixes the position of an element to the top of the screen.
+&lt;div class="ke-fixed-top"&gt;...&lt;/div&gt;
+
+&lt;!-- Set position fixed (bottom) --&gt;
+Fixes the position of an element to the bottom of the screen.
+&lt;div class="ke-fixed-bottom"&gt;...&lt;/div&gt;</code></pre>
 
         <hr class="ke-hr">
         <h3>Examples</h3>
@@ -731,7 +770,7 @@ Make an element circular.
     </main>
 
     <footer>
-        <div class="ke-bg-default ke-content-lg">
+        <div class="ke-bg-default ke-content-lg ke-section-lg">
             <div class="ke-container">
                 <p>Copyright &copy; <span class="copyright-date"></span> <a href="https://christiandale.no" class="ke-anchor">Christian Dale</a>. All rights reserved.</p>
                 <p>Licensed under the <a href="https://github.com/christian-dale/kernel.css/blob/master/LICENSE.txt">MIT</a> License.</p>

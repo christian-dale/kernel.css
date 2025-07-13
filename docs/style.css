@@ -71,11 +71,6 @@ nav .github-icon {
 .grid-example .grid-example-item {
     background: #eee;
     border-radius: 5px;
-    margin-right: 20px;
-}
-
-.grid-example .grid-example-item[class*='ke-col-']:last-of-type {
-    margin-right: 0;
 }
 
 .grid-example p {
