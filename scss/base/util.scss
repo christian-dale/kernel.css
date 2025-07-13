@@ -11,8 +11,8 @@
     overflow-wrap: break-word;
 }
 
-.circle {
-    border-radius: 50%;
+.list {
+    line-height: 1.8em;
 }
 
 .hr {
@@ -25,27 +25,27 @@
 }
 
 .section {
-    margin: theme.$main-padding 0;
+    margin: 1rem 0;
 }
 
 .section-lg {
-    margin: theme.$main-padding * 2 0;
+    margin: 2.5rem 0;
 }
 
 .content {
-    padding: theme.$main-padding 0;
+    padding: 1rem 0;
 }
 
 .content-lg {
-    padding: theme.$main-padding * 2 0;
+    padding: 2.5rem 0;
 }
 
 .shadow {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
-.center {
-    margin: auto;
+.circle {
+    border-radius: 50%;
 }
 
 .center {
